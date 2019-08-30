@@ -12,6 +12,7 @@ import {
 const Home = props => (
   <div>
     <h1>Home</h1>
+    <h1>welcome</h1>
     <p>Count: {props.count}</p>
 
     <p>

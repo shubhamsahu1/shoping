@@ -57,10 +57,10 @@
 }
 .loginSection{
     font-size: 70%;
-   
+    margin: 3px 2px;
 }
 .loginSection a{
-    margin:4px 10px;
+    margin:0px 10px;
     color: #000000;
 }
 

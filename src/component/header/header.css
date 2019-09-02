@@ -2,6 +2,7 @@
     width:100%;
     height: 80px;
     display: flex;
+    z-index: 10;
     box-shadow: 0px 3px 10px #d0d0d0;
 }
 .wraper a,

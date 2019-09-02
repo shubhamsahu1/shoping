@@ -7,7 +7,7 @@ export default () => (
     <img className="logo" src={require("./asset/logo.png")}  alt="Smiley face" ></img>
     <div className="center">
       <Link to="/">Home</Link>
-      <Link to="/about-us">About</Link>
+      <Link to="/product">Product</Link>
     </div>
     <div className="right">
       <div className="loginSection">

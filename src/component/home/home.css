@@ -1,0 +1,81 @@
+/*---------------------------------------------*/
+/*-------------- offer section-----------------*/
+/*-------------- offer section-----------------*/
+
+.content,
+.w3-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.content {
+  width: 100%;
+}
+.animateFading {
+  animation: fading 3s;
+}
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.display-container {
+  position: relative;
+  box-shadow: 0px 5px 5px 0px #d0d0d0;
+}
+.display-container img {
+  display: none;
+}
+.display-container img.show {
+  display: block;
+}
+.nav-container {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 100%);
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.arrow {
+  cursor: pointer;
+  color: white;
+  padding: 10px 10px;
+  background-color: black;
+  opacity: 0.1;
+  transition: opacity 0.2s;
+}
+.arrow:hover {
+  opacity: 0.5;
+}
+.nav-container-badge{
+  bottom: 5%;
+}
+.badge {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 8px;
+  width: 8px;
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.badgeSelected{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.badge:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.transparent{
+  background-color: transparent;
+}

@@ -28,51 +28,20 @@ class Offer extends React.Component {
     return (
       <div>
         <div className="content display-container">
-          <img
-            className={classnames({
-              show: this.state.slideIndex === 1,
-              animateFading: 1
-            })}
-            alt="offer1"
-            src={require("./asset/offer1.jpg")}
-            style={{ width: "100%" }}
-          />
-          <img
-            className={classnames({
-              show: this.state.slideIndex === 2,
-              animateFading: 1
-            })}
-            alt="offer2"
-            src={require("./asset/offer2.jpg")}
-            style={{ width: "100%" }}
-          />
-          <img
-            className={classnames({
-              show: this.state.slideIndex === 3,
-              animateFading: 1
-            })}
-            alt="offer3"
-            src={require("./asset/offer3.jpg")}
-            style={{ width: "100%" }}
-          />
-          <img
-            className={classnames({
-              show: this.state.slideIndex === 4,
-              animateFading: 1
-            })}
-            alt="offer4"
-            src={require("./asset/offer4.jpg")}
-            style={{ width: "100%" }}
-          />
-          <img
-            className={classnames({
-              show: this.state.slideIndex === 5,
-              animateFading: 1
-            })}
-            alt="offer5"
-            src={require("./asset/offer5.jpg")}
-            style={{ width: "100%" }}
-          />
+        {[1, 2, 3, 4, 5].map((val,i) => {
+              return (
+                <img
+                className={classnames({
+                  show: this.state.slideIndex === val,
+                  animateFading: 1
+                })}
+                alt={`offer${val}`}
+                src={require(`./asset/offer${val}.jpg`)}
+                style={{ width: "100%" }}
+              />
+              )
+        })}
+        
           <div className="nav-container" style={{ width: "100%" }}>
             <div className="left arrow" onClick={() => this.plusDivs(-1)}>
               PREV

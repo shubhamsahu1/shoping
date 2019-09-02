@@ -1,5 +1,6 @@
 import React from "react";
 import classnames from "classnames";
+import './offer.css';
 
 class Offer extends React.Component {
   state = {
@@ -31,6 +32,7 @@ class Offer extends React.Component {
         {[1, 2, 3, 4, 5].map((val,i) => {
               return (
                 <img
+                key={val}
                 className={classnames({
                   show: this.state.slideIndex === val,
                   animateFading: 1

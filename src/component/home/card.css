@@ -1,0 +1,33 @@
+.CardWraper {
+  width: 100%;
+  display: flex;
+  z-index: 10;
+  box-shadow: 0px 3px 10px #d0d0d0;
+}
+.revs{
+    flex-direction: row-reverse;
+}
+.CardWraper .CardImg {
+  width: 33%;
+  margin: 0 5%;
+}
+
+.CardWraper .info {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.CardWraper .infoText {
+  font-size: 70%;
+}
+.CardWraper .btn{
+    font-size: 70%;
+    padding: 5px 10px;
+    background-color: #bf2957;
+    border: none;
+    color: white;
+    
+}

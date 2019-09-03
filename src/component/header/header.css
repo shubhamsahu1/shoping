@@ -73,3 +73,10 @@
         display: none;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .center a{
+        padding: 5px;
+        margin:10px 5px;
+    }
+} 

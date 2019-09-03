@@ -23,7 +23,6 @@
 }
 .display-container {
   position: relative;
-  box-shadow: 0px 5px 5px 0px #d0d0d0;
 }
 .display-container img {
   display: none;

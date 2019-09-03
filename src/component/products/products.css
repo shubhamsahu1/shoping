@@ -1,0 +1,25 @@
+.productPageWraper {
+    height: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  align-items:stretch;
+}
+.leftNav{
+    width: 25%;
+    background-color: #eeeeee;
+}
+.link{
+    display: block;
+    text-decoration: none;
+    
+    color: #555555;
+    padding: 10px 20px;
+    font-size: 90%;
+    border-bottom:2px solid #d8d8d8;
+}
+.produtsBody{
+    flex: 1;
+    display: flex;
+    flex-wrap:wrap
+}

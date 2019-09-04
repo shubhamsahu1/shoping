@@ -12,14 +12,26 @@
 .link{
     display: block;
     text-decoration: none;
-    
     color: #555555;
     padding: 10px 20px;
     font-size: 90%;
     border-bottom:2px solid #d8d8d8;
 }
+.link:hover{
+    background-color: #dddddd;
+}
 .produtsBody{
     flex: 1;
     display: flex;
     flex-wrap:wrap
+}
+
+/*---------------------------------------------*/
+/*-------------- Products section-----------------*/
+/*-------------less than 480px-----------------*/
+
+@media only screen and (max-width: 480px) {
+  .leftNav{
+      display: none;
+  }
 }

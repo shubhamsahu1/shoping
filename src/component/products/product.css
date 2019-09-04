@@ -1,11 +1,66 @@
 .productWraper{
-    width: 30%;
-    border:1px solid black;
-    
+    width: 25%;
+    box-shadow: 0px 1px 4px #eeeeee;
+    font-size: 80%;
+    text-align: center;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
 }
-.heading{
 
-}
 .productImg{
-    width: 170px;
+    width: 100%;
+    padding: 15px 5px;
+}
+.priceWrapDestop{
+    display: flex;   
+    justify-content:space-around;
+    margin: 5px 0; 
+    align-items:center;
+}
+.productInfo{
+    background-color: #eeeeee;
+    font-size: 80%;
+    text-align:left;
+    padding: 3px;
+}
+.priceWrapTab{
+       display: none;
+}
+.buyNow{
+    padding: 5px 15px;
+    background-color: #bf2957;
+    color: white;
+}
+
+/*---------------------------------------------*/
+/*-------------- Product section-----------------*/
+/*-------------less than 480px-----------------*/
+
+@media only screen and (max-width: 480px) {
+    
+  }
+
+/*---------------------------------------------*/
+/*-------------- Product section-----------------*/
+/*-------------less than 480px-----------------*/
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 768px) {
+    .productWraper {
+        width: 50%;
+    }
+    .priceWrapDestop{
+        display: none;
+    }
+    .priceWrapTab{
+        display: block;
+    }
+
+    .buyNow{
+        padding: 5px 15px;
+        background-color: #bf2957;
+        color: white;
+    }
 }

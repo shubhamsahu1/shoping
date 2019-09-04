@@ -12,15 +12,20 @@ class Product extends React.Component {
       const {name,imageURL,description,price} = this.props
     return (
       <div className="productWraper">
-       <div className="heading">{name}</div>
+       <div className="heading"><strong>{name}</strong></div>
        <img className="productImg" src={imageURL} alt="Smiley face"></img>
        <div className="productInfo">{description}</div>
-       <div>
+       <div className="priceWrapDestop">
            <div className="productMrp">
-                MRP {price}
+                MRP Rs.{price}
            </div>
            <div className="buyNow">
-           buyNow
+           BuyNow
+           </div>
+       </div>
+       <div className="priceWrapTab">
+            <div className="buyNow">
+             BuyNow @ Rs.{price}
            </div>
        </div>
       </div>

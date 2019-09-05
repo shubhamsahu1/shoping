@@ -4,7 +4,7 @@ import './header.css';
 
 export default () => (
   <div className="wraper">
-    <img className="logo" src={require("./asset/logo.png")}  alt="Smiley face" ></img>
+    <div className="logo"  ></div>
     <div className="center">
       <Link to="/">Home</Link>
       <Link to="/product">Product</Link>
@@ -15,7 +15,7 @@ export default () => (
       <Link to="/about-us">Register</Link>
       </div>
       <div className="cart">
-      <img src={require("./asset/cart.svg")}  alt="Smiley face" ></img>
+      <img src={"/static/images/cart.svg"}  alt="Smiley face" ></img>
       <span>0 items</span> 
       </div>
     </div>

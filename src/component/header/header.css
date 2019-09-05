@@ -10,9 +10,10 @@
   text-decoration: none;
 }
 .logo {
-  width: 177px;
+    width: 200px;
+    margin: 1px 5px;
   background: url(/static/images/logo_2x.png) no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .cart {
@@ -80,8 +81,7 @@
     margin: 10px 5px;
   }
   .logo {
-    width: 177px;
     background: url(/static/images/logo.png) no-repeat;
-    background-size: cover;
+    background-size: contain;
   }
 }

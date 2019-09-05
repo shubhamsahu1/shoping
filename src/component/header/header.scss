@@ -1,0 +1,85 @@
+
+.wraper {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  z-index: 10;
+  box-shadow: 0px 3px 10px #d0d0d0;
+  a {
+    &:link,
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  .cart {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;
+    font-weight: 400;
+    img {
+      width: 20px;
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    .loginSection {
+      font-size: 70%;
+      margin: 3px 2px;
+      a {
+        margin: 0px 10px;
+        color: #000000;
+      }
+    }
+  }
+  .center {
+    flex-grow: 2;
+    display: flex;
+    @include viewport(small){
+      display: none;
+    }
+    align-items: center;
+    a {
+      padding: 5px;
+      margin: 10px 20px;
+      @include viewport(medium){
+        margin: 10px 5px;
+      }
+      &:visited,
+      &:link {
+        color: #000000;
+        text-decoration: none;
+        padding-bottom: 1px;
+        border-bottom: 1px solid #3a3430;
+        -webkit-transition: border-bottom 0.2s, color 0.2s;
+        transition: border-bottom 0.2s, color 0.2s;
+      }
+      &:hover,
+      :active {
+        color: rgb(70, 56, 56);
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+
+  .logo {
+    width: 200px;
+    margin: 1px 5px;
+    background: url(/static/images/logo_2x.png) no-repeat;
+    @include viewport(medium){
+      background: url(/static/images/logo.png) no-repeat;
+      background-size: contain;
+    }
+    background-size: contain;
+  }
+  
+}
+
+@media only screen and (max-width: 480px) {
+  .wraper {
+    justify-content: space-between;
+  }
+}

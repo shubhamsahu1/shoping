@@ -4,7 +4,7 @@ import Home from './home/index'
 import Products from './products'
 import Header from './header'
 import Footer from './footer'
-import './App.css'
+import './App.scss'
 const App = () => (
   <div className="appWraper">
    <Header/>

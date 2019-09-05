@@ -1,3 +1,5 @@
+@import "./_mixins.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -18,4 +20,7 @@ html {
 .mainBoby{
   flex-grow: 1;
 }
+
+@import './header/header.scss';
+
 

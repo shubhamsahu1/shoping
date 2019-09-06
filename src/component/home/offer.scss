@@ -2,13 +2,17 @@
 /*-------------- offer section-----------------*/
 /*---------------------------------------------*/
 
-.content,
-.w3-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
 .content {
   width: 100%;
+  &.display-container {
+    position: relative;
+    img {
+      display: none;
+      &.show {
+        display: block;
+      }
+    }
+  }
 }
 .animateFading {
   animation: fading 3s;
@@ -21,15 +25,7 @@
     opacity: 1;
   }
 }
-.display-container {
-  position: relative;
-}
-.display-container img {
-  display: none;
-}
-.display-container img.show {
-  display: block;
-}
+
 .nav-container {
   margin-top: 16px;
   margin-bottom: 16px;
@@ -38,54 +34,48 @@
   left: 50%;
   bottom: 50%;
   transform: translate(-50%, 100%);
-}
-.left {
-  float: left;
-}
-.right {
-  float: right;
-}
-.arrow {
-  cursor: pointer;
-  color: white;
-  padding: 10px 10px;
-  background-color: black;
-  opacity: 0.1;
-  transition: opacity 0.2s;
-}
-.arrow:hover {
-  opacity: 0.5;
-}
-.nav-container-badge{
-  bottom: 5%;
-}
-.badge {
-  background-color: rgba(0, 0, 0, 0.2);
-  height: 8px;
-  width: 8px;
-  display: inline-block;
-  margin: 5px;
-  text-align: center;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.badgeSelected{
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.badge:hover{
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.transparent{
-  background-color: transparent;
-}
-
-/*---------------------------------------------*/
-/*-------------- offer section-----------------*/
-/*-------------less than 480px-----------------*/
-
-@media only screen and (max-width: 480px) {
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
   .arrow {
-    padding: 5px 5px;
-    font-size: 60%;
+    cursor: pointer;
+    color: white;
+    padding: 10px 10px;
+    background-color: black;
+    opacity: 0.1;
+    transition: opacity 0.2s;
+    &:hover {
+      opacity: 0.5;
+    }
+    /*---------------------------------------------*/
+    /*-------------- offer section-----------------*/
+    /*-------------less than 480px-----------------*/
+
+    @include viewport(small) {
+      padding: 5px 5px;
+      font-size: 60%;
+    }
+  }
+  &.nav-container-badge {
+    bottom: 5%;
+  }
+  .badge {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    &.badgeSelected {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
   }
 }

@@ -4,52 +4,45 @@
   margin: 0 auto;
   display: flex;
   align-items: stretch;
-}
-.leftNav {
-  width: 25%;
-  background-color: #eeeeee;
-}
-.link {
-  display: block;
-  text-decoration: none;
-  color: #555555;
-  padding: 10px 20px;
-  font-size: 90%;
-  border-bottom: 2px solid #d8d8d8;
-}
-.link:hover {
-  background-color: #dddddd;
-}
-.produtsBody {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-}
-.productDrop {
-  display: none;
-}
-
-/*---------------------------------------------*/
-/*-------------- Products section-----------------*/
-/*-------------less than 480px-----------------*/
-
-@media only screen and (max-width: 480px) {
   .leftNav {
-    display: none;
+    width: 25%;
+    background-color: #eeeeee;
+    .link {
+      display: block;
+      text-decoration: none;
+      color: #555555;
+      padding: 10px 20px;
+      font-size: 90%;
+      border-bottom: 2px solid #d8d8d8;
+      &:hover {
+        background-color: #dddddd;
+      }
+    }
+    @include viewport(small) {
+      display: none;
+    }
+  }
+  .produtsBody {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
   }
   .productDrop {
-    display: block;
-    height: 40px;
-    padding: 0 25px;
-    background-color: #bf2957;
-    background:  #bf2957 url(./arrow.png) no-repeat right .75rem center;
-    background-size: 30px;
-    color: white;
-    -webkit-appearance: none;
-    border: 0;
-    z-index: 10;
-   }
-  .productPageWraper {
+    display: none;
+    @include viewport(small) {
+      display: block;
+      height: 40px;
+      padding: 0 25px;
+      background-color: #bf2957;
+      background: #bf2957 url(./arrow.png) no-repeat right 0.75rem center;
+      background-size: 30px;
+      color: white;
+      -webkit-appearance: none;
+      border: 0;
+      z-index: 10;
+    }
+  }
+  @include viewport(small) {
     width: 100%;
     display: flex;
     flex-direction: column;

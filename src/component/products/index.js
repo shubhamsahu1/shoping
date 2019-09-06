@@ -1,5 +1,5 @@
 import React from "react";
-import "./products.css";
+
 import Product from "./porduct";
 const leftNav = [
   "Fruits & Vegetables",

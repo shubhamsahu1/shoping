@@ -1,7 +1,7 @@
 import React from "react";
 import Offer from "./offer";
 import Card from "./card";
-import "./home.css";
+
 const cardData = [
   {
     name: "Beverages",

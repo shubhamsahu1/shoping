@@ -22,5 +22,13 @@ html {
 }
 
 @import './header/header.scss';
-@import  './footer/footer.scss'
+@import  './footer/footer.scss';
+
+@import "./home/home.scss";
+@import "./home/offer.scss";
+@import "./home/card.scss";
+
+@import "./products/products.scss";
+@import "./products/product.scss";
+
 

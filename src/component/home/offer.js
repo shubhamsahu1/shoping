@@ -1,6 +1,6 @@
 import React from "react";
 import classnames from "classnames";
-import './offer.css';
+
 
 class Offer extends React.Component {
   state = {

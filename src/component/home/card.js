@@ -1,6 +1,6 @@
 import React from "react";
 import classnames from "classnames";
-import "./card.css";
+
 
 export default props => (
     <div className={classnames({ CardWraper: 1, revs: props.rowRev })}>

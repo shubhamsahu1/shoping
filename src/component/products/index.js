@@ -297,7 +297,7 @@ export default () => (
     </div>
     <select className="productDrop">
     {leftNav.map((val, i) => (
-         <option value={val}>{val}</option>
+         <option value={val} key={i}>{val}</option>
       ))}
      </select>
     <div className="produtsBody">

@@ -1,5 +1,5 @@
+import api from "./api";
+import { setCategories as  setCategoriesAction} from "./api";
 
-import counter from './counter'
-
-export default {counter}
-  
+export default {api} 
+export const setCategories = setCategoriesAction;

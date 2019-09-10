@@ -9,18 +9,21 @@ const leftNav = [
   "Baby Care"
 ];
 
-class Products extends React.Component{
+class Products extends React.Component {
   state = {
-    ProductData:[]
-  }
-  componentDidMount(){
-    fetch('http://localhost:5000/products').then((response) => response.json())
-        .then(( results ) => this.setState({ ProductData: results })).catch(err => {
-          console.log("responce error");
-        });;
+    ProductData: []
+  };
+  componentDidMount() {
+    fetch("http://localhost:5000/products")
+      .then(response => response.json())
+      .then(results => this.setState({ ProductData: results }))
+      .catch(err => {
+        console.log("responce error");
+      });
+    
   }
   render() {
-    return(
+    return (
       <div className="productPageWraper">
         <div className="leftNav">
           {leftNav.map((val, i) => (
@@ -30,17 +33,19 @@ class Products extends React.Component{
           ))}
         </div>
         <select className="productDrop">
-        {leftNav.map((val, i) => (
-             <option value={val} key={i}>{val}</option>
+          {leftNav.map((val, i) => (
+            <option value={val} key={i}>
+              {val}
+            </option>
           ))}
-         </select>
+        </select>
         <div className="produtsBody">
-          { this.state.ProductData.map(product => (
+          {this.state.ProductData.map(product => (
             <Product key={product.id} {...product} />
           ))}
         </div>
       </div>
-    )
+    );
   }
 }
 export default Products;

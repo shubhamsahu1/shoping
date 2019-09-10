@@ -1,7 +1,11 @@
-export const GET_CATEGORIES_REQUESTED = 'api/GET_CATEGORIES_REQUESTED'
+export const GET_REQUESTED = 'api/GET_CALL_REQUESTED'
 export const SET_CATEGORIES = 'api/SET_CATEGORIES'
+export const SET_PRODUCTS = 'api/SET_PRODUCTS'
+
+
 const initialState = {
-  categories: []
+  categories: [],
+  products:[]
 }
 
 export default (state = initialState, action) => {
@@ -9,9 +13,16 @@ export default (state = initialState, action) => {
     case SET_CATEGORIES:
       return {
         ...state,
-        categories: action.payload
+        categories: action.payload,
+        loading: false
       }
-      case  GET_CATEGORIES_REQUESTED:
+      case SET_PRODUCTS:
+      return {
+        ...state,
+        products: action.payload,
+        loading: false
+      }
+      case  GET_REQUESTED:
         return {
           ...state,
           loading: true
@@ -24,13 +35,30 @@ export default (state = initialState, action) => {
 export const setCategories = () => {
   return dispatch => {
     dispatch({
-      type: GET_CATEGORIES_REQUESTED
+      type: GET_REQUESTED
     })
     return fetch("http://localhost:5000/categories")
     .then(response => response.json())
     .then(results => 
       dispatch({
         type: SET_CATEGORIES,
+        payload: results
+      }))
+    .catch(err => {
+      console.log("responce error");
+    });
+  }
+}
+export const setProdusts = () => {
+  return dispatch => {
+    dispatch({
+      type: GET_REQUESTED
+    })
+    return fetch("http://localhost:5000/products")
+    .then(response => response.json())
+    .then(results => 
+      dispatch({
+        type: SET_PRODUCTS,
         payload: results
       }))
     .catch(err => {

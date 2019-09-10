@@ -7,7 +7,7 @@ import {setCategories} from './../../modules'
 
 class Products extends React.Component {
   
-  componentWillMount() {
+  componentDidMount() {
     this.props.getCategories()
   }
   render() {

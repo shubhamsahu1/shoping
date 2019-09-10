@@ -20,7 +20,6 @@ class Products extends React.Component{
         });;
   }
   render() {
-    debugger;
     return(
       <div className="productPageWraper">
         <div className="leftNav">

@@ -17,7 +17,11 @@
       &:hover {
         background-color: #dddddd;
       }
+      &.selected {
+        background-color: #dddddd;
+      }
     }
+
     @include viewport(small) {
       display: none;
     }

@@ -22,7 +22,7 @@ export default (state = initialState, action) => {
 
 export const setFilterId = (id) => {
   return (dispatch,getState) => {
-      const filterID = (getState().filterID===id)?"":id
+       const filterID = (getState().filter.filterID===id)?"":id
     dispatch({
       type: SET_PRODUCT_FILTER,
       payload:filterID

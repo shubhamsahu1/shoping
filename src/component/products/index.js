@@ -15,8 +15,8 @@ class Products extends React.Component {
     
   }
   render() {
-    const {setfilter} = this.props;
-    return (
+    const {setfilter,filter} = this.props;
+   return (
       <div className="productPageWraper">
         <div className="leftNav">
           {this.props.cardData.filter((data)=>data.enabled).map((data, i) => (
@@ -33,7 +33,7 @@ class Products extends React.Component {
           ))}
         </select>
         <div className="produtsBody">
-          {this.props.ProductData.map(product => (
+          {this.props.ProductData.filter((product)=>product.category===filter.filterID || filter.filterID==="").map(product => (
             <Product key={product.id} {...product} />
           ))}
         </div>
@@ -47,14 +47,14 @@ const mapStateToProps = (state) => {
   return {
     cardData: state.api.categories,
     ProductData: state.api.products,
-    filterId:state.filter.filterId
+    filter:state.filter
   }
 }
 const mapDispatchToProps = dispatch => {
   return {
     getCategories: () => dispatch(setCategories()),
     getProducts: () => dispatch(setProdusts()),
-    setfilter:()=>dispatch(setFilterId()),
+    setfilter:(id)=>dispatch(setFilterId(id)),
   }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(Products)

@@ -19,13 +19,14 @@ class Products extends React.Component {
           .sort((a, b) => a.order - b.order)
           .map(card =>
             card.enabled ? (
-              <React.Fragment key={card.key}>
+              <React.Fragment key={card.id}>
                 <Card
                   url={card.imageUrl}
                   heading={card.name}
                   info={card.description}
                   btnLable={"Explore-" + card.key}
                   rowRev={card.order % 2}
+                  cardId={card.id}
                 />
                 <div className="shadowSaprater"></div>
               </React.Fragment>

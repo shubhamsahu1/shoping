@@ -81,7 +81,7 @@ export const removeFromCart = id => {
   };
 };
 
-export const toggleCart = id => {
+export const toggleCart = () => {
   return (dispatch, getState) => {
     dispatch({
       type: TOGGLE_CART,
@@ -89,7 +89,7 @@ export const toggleCart = id => {
     });
   };
 };
-export const cartTotal = id => {
+export const cartTotal = () => {
   return (dispatch, getState) => {
     let storeCart = getState().cart.cartData;
     const totalVal = storeCart.reduce((a, c) => a + c.item.price*c.qty, 0);
@@ -97,5 +97,23 @@ export const cartTotal = id => {
       type: CART_TOTAL,
       payload: totalVal
     });
+  };
+};
+
+export const checkout = id => {
+  return (dispatch, getState) => {
+    dispatch({
+      type: ADD_TO_CART,
+      payload: []
+    });
+    dispatch({
+      type: TOTAL_CART_ITEM,
+      payload: 0
+    });
+    dispatch({
+      type: CART_TOTAL,
+      payload: 0
+    });
+    dispatch(toggleCart());
   };
 };

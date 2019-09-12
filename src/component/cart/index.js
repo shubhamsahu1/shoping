@@ -1,14 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
 import Item from "./item";
-import { toggleCart } from "./../../modules";
+import { toggleCart, checkout } from "./../../modules";
 //import classnames from "classnames";
 
 class Cart extends React.Component {
   state = {};
   componentDidMount() {}
   render() {
-    const { toggleCart, totalItem, totalValue } = this.props;
+    const { toggleCart, totalItem, totalValue, checkout } = this.props;
     return (
       <div className="cart">
         <div className="cart-myCart">
@@ -24,7 +24,7 @@ class Cart extends React.Component {
           <div className="cart-footer--promo">
             Promo can be applied on payment page
           </div>
-          <div className="cart-footer-checkout">
+          <div className="cart-footer-checkout" onClick={() => checkout()}>
             <span>Proceed to Checkout</span>
             <span>Rs.{totalValue}</span>
           </div>
@@ -42,7 +42,8 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => {
   return {
-    toggleCart: () => dispatch(toggleCart())
+    toggleCart: () => dispatch(toggleCart()),
+    checkout: () => dispatch(checkout())
   };
 };
 export default connect(

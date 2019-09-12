@@ -1,8 +1,10 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import { Link } from 'react-router-dom'
+import {toggleCart} from './../../modules'
 
-
-export default () => (
+const Header = (props) => (
   <div className="wraper">
     <div className="logo"  ></div>
     <div className="center">
@@ -14,11 +16,24 @@ export default () => (
       <Link to="/">SignIn</Link>
       <Link to="/about-us">Register</Link>
       </div>
-      <div className="cart-wraper">
+      <div className="cart-wraper" onClick={()=>props.toggleCart()}>
       <img src={"/static/images/cart.svg"}  alt="Smiley face" ></img>
-      <span>0 items</span> 
+      <span>{props.totalItem} items</span> 
       
       </div>
     </div>
   </div>
 )
+
+const mapStateToProps = (state) => ({
+  totalItem:state.cart.totalItem
+})
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+  toggleCart: () => toggleCart()
+}, dispatch)
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Header)

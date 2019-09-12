@@ -6,6 +6,7 @@ import { setProdusts as  setProdustsAction} from "./api";
 import { setFilterId as  setFilterIdAction} from "./filterProduct";
 import { addToCart as  addToCartAction} from "./cart";
 import { removeFromCart as  removeFromCartAction} from "./cart";
+import { toggleCart as  toggleCartAction} from "./cart";
 
 
 export default {api,filter,cart} 
@@ -14,3 +15,4 @@ export const setProdusts = setProdustsAction;
 export const setFilterId = setFilterIdAction;
 export const addToCart = addToCartAction;
 export const removeFromCart = removeFromCartAction;
+export const toggleCart = toggleCartAction;

@@ -1,13 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addToCart } from "./../../modules";
+import { addToCart, removeFromCart } from "./../../modules";
 //import classnames from "classnames";
 
 class Item extends React.Component {
   state = {};
   componentDidMount() {}
   render() {
-    const { cart, addToCart } = this.props;
+    const { cart, addToCart, removeFromCart } = this.props;
     return (
       <div className="itemWraper">
         {cart.cartData.map(data => (
@@ -24,6 +24,7 @@ class Item extends React.Component {
                   src="/static/remove.png"
                   className="item-info-qty--icon"
                   alt="remove"
+                  onClick={() => removeFromCart(data.item.id)}
                 ></img>
 
                 <span>{data.qty}</span>
@@ -54,7 +55,8 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => {
   return {
-    addToCart: id => dispatch(addToCart(id))
+    addToCart: id => dispatch(addToCart(id)),
+    removeFromCart: id => dispatch(removeFromCart(id))
   };
 };
 export default connect(

@@ -3,6 +3,7 @@ export const ADD_TO_CART = 'cart/ADD_TO_CART'
 
 
 
+
 const initialState = {
   cartData: []
 }
@@ -34,6 +35,20 @@ export const addToCart = (id) => {
     dispatch({
       type: ADD_TO_CART,
       payload:storeCart
+    })
+   }
+}
+export const removeFromCart = (id) => {
+  return (dispatch,getState) => {
+      
+       let storeCart = getState().cart.cartData
+       const index = storeCart.findIndex((i)=>i.item.id === id)
+       if(index!==-1){
+        storeCart[index].qty--;
+       }
+    dispatch({
+      type: ADD_TO_CART,
+      payload:storeCart.filter((e)=>e.qty!==0)
     })
    }
 }

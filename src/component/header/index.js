@@ -14,9 +14,10 @@ export default () => (
       <Link to="/">SignIn</Link>
       <Link to="/about-us">Register</Link>
       </div>
-      <div className="cart">
+      <div className="cart-wraper">
       <img src={"/static/images/cart.svg"}  alt="Smiley face" ></img>
       <span>0 items</span> 
+      
       </div>
     </div>
   </div>

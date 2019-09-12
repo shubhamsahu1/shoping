@@ -24,11 +24,16 @@ html {
 @import './header/header.scss';
 @import  './footer/footer.scss';
 
+.mainBoby{
+  position: relative;
+}
 @import "./home/home.scss";
 @import "./home/offer.scss";
 @import "./home/card.scss";
 
 @import "./products/products.scss";
 @import "./products/product.scss";
+@import "./cart/cart.scss";
+@import "./cart/item.scss";
 
 

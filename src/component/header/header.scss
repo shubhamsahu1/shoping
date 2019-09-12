@@ -15,8 +15,9 @@
     }
   }
 
-  .cart {
+  .cart-wraper {
     display: flex;
+    position: relative;
     flex-grow: 1;
     justify-content: center;
     align-items: center;

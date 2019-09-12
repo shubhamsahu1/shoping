@@ -21,6 +21,13 @@ class Cart extends React.Component {
         <span className="close" onClick={()=>toggleCart()}></span>
       </div>
       <Item/>
+      <div className="cart-footer">
+        <div className="cart-footer--promo">Promo can be applied on payment page</div>
+        <div className="cart-footer-checkout">
+          <span>Proceed to Checkout</span>
+          <span>total</span>
+        </div>
+      </div>
     </div>     
     );
   }

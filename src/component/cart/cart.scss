@@ -6,6 +6,16 @@
   right: 0;
   background-color: #eeeeee;
   z-index: 11;
+  @include viewport(small) {
+    width: 100%;
+    top: -80px;
+    height: 100vh;
+  }
+  @include viewport(medium) {
+    width: 100%;
+    top: -80px;
+    height: 100vh;
+  }
   .cart-myCart {
     display: flex;
     align-items: center;

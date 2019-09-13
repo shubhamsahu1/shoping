@@ -2,12 +2,12 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  height: 87vh;
+  height: 90vh;
   width: 470px;
   top: 0px;
   right: 0;
   background-color: #eeeeee;
-  z-index: 11;
+  z-index: 50;
   @include viewport(small) {
     width: 100%;
     top: -80px;
@@ -21,6 +21,7 @@
   .cart-footer {
     background-color: white;
     text-align: center;
+    margin-bottom: 10px;
     .cart-footer--promo {
       font-size: 80%;
       padding: 5px;

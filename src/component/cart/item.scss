@@ -37,7 +37,7 @@
       font-weight: 500;
     }
   }
-  .item-lowest{
+  .item-lowest {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -46,10 +46,10 @@
     margin: 10px;
     padding: 10px;
     @include viewport(medium) {
-      font-size: 90%
+      font-size: 90%;
     }
     @include viewport(small) {
-    font-size: 80%
+    font-size: 80%;
     }
   }
 }

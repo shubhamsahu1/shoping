@@ -55,7 +55,10 @@ export const setProdusts = () => {
       type: GET_REQUESTED
     })
     return fetch("http://localhost:5000/products")
-    .then(response => response.json())
+    .then(response => {
+      return response.json()
+    }
+      )
     .then(results => 
       dispatch({
         type: SET_PRODUCTS,

@@ -17,17 +17,34 @@ class Cart extends React.Component {
           </span>
           <span className="close" onClick={() => toggleCart()}></span>
         </div>
-        <div className="cart-items">
-          <Item />
-        </div>
+        {totalItem > 0 ? (
+          <div className="cart-items">
+            <Item />
+          </div>
+        ) : (
+          <div className="cart-noItem">
+            <div className="cart-noItem--header">No Item in your cart</div>
+            <div className="cart-noItem--sub">
+              your favourite items are just click away
+            </div>
+          </div>
+        )}
         <div className="cart-footer">
-          <div className="cart-footer--promo">
-            Promo can be applied on payment page
-          </div>
-          <div className="cart-footer-checkout" onClick={() => checkout()}>
-            <span>Proceed to Checkout</span>
-            <span>Rs.{totalValue}</span>
-          </div>
+          {totalItem > 0 ? (
+            <React.Fragment>
+              <div className="cart-footer--promo">
+                Promo can be applied on payment page
+              </div>
+              <div className="cart-footer-checkout" onClick={() => checkout()}>
+                <span>Proceed to Checkout</span>
+                <span>Rs.{totalValue}</span>
+              </div>
+            </React.Fragment>
+          ) : (
+            <div className="cart-footer-checkout cart-footer--start" onClick={() => checkout()}>
+                <span>Start Shopping</span>
+              </div>
+          )}
         </div>
       </div>
     );

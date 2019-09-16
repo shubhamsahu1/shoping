@@ -43,6 +43,10 @@ class Item extends React.Component {
             </div>
           </div>
         ))}
+        <div className="item-lowest">
+          <img src="static/images/lowest-price.png" alt="remove"></img>
+          <span>You won't find cheaper anywhere</span>
+        </div>
       </div>
     );
   }

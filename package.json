@@ -24,8 +24,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:scss": "stylelint 'src/**/*.scss' --syntax scss",
-    "lint:scss:fix": "stylelint 'src/**/*.scss' --syntax scss --fix",
     "lint:js": "eslint . --ext .js,.jsx",
     "lint:js:fix": "npm run lint:js -- --fix",
     "prettier": "prettier --write src/**/*.{js,css}"
@@ -36,10 +34,6 @@
   "lint-staged": {
     "src/**/*.{js,jsx}": [
       "npm run --silent lint:js:fix",
-      "git add"
-    ],
-    "src/**/*.scss": [
-      "npm run --silent lint:scss:fix",
       "git add"
     ],
     "src/**/*.{js,css}": [

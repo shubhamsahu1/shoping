@@ -1,7 +1,6 @@
 import React from "react";
 import classnames from "classnames";
 
-
 class Offer extends React.Component {
   state = {
     slideIndex: 1
@@ -19,7 +18,7 @@ class Offer extends React.Component {
   };
 
   currentDiv = n => {
-      this.setState({slideIndex:n})
+    this.setState({ slideIndex: n });
   };
 
   componentDidMount() {
@@ -29,21 +28,21 @@ class Offer extends React.Component {
     return (
       <div>
         <div className="content display-container">
-        {[1, 2, 3, 4, 5].map((val,i) => {
-              return (
-                <img
+          {[1, 2, 3, 4, 5].map((val, i) => {
+            return (
+              <img
                 key={val}
                 className={classnames({
                   show: this.state.slideIndex === val,
                   animateFading: 1
                 })}
                 alt={`offer${val}`}
-                src={require(`./asset/offer${val}.jpg`)}
+                src={`/static/images/offers/offer${val}.jpg`}
                 style={{ width: "100%" }}
               />
-              )
-        })}
-        
+            );
+          })}
+
           <div className="nav-container" style={{ width: "100%" }}>
             <div className="left arrow" onClick={() => this.plusDivs(-1)}>
               PREV
@@ -56,15 +55,18 @@ class Offer extends React.Component {
             className="nav-container nav-container-badge"
             style={{ width: "100%" }}
           >
-            {[1, 2, 3, 4, 5].map((val,i) => {
+            {[1, 2, 3, 4, 5].map((val, i) => {
               return (
-                <span className={classnames({
+                <span
+                  className={classnames({
                     badgeSelected: this.state.slideIndex === val,
                     badge: 1
-                  })}  key={val} onClick={()=>this.currentDiv(val)}></span>
+                  })}
+                  key={val}
+                  onClick={() => this.currentDiv(val)}
+                ></span>
               );
             })}
-
           </div>
         </div>
       </div>

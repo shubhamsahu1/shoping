@@ -35,6 +35,7 @@
     }
     .item-total {
       font-weight: 500;
+      font-size: 110%;
     }
   }
   .item-lowest {
@@ -49,7 +50,7 @@
       font-size: 90%;
     }
     @include viewport(small) {
-    font-size: 80%;
+      font-size: 80%;
     }
   }
 }

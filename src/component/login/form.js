@@ -7,22 +7,20 @@ const submit = e => {
 };
 class Login extends React.Component {
   render() {
-    const { handleSubmit, pristine, reset, submitting } = this.props;
+    const { handleSubmit } = this.props;
     return (
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="firstName">First Name</label>
-          <Field name="firstName" component="input" type="text" />
-        </div>
-        <div>
-          <label htmlFor="lastName">Last Name</label>
-          <Field name="lastName" component="input" type="text" />
-        </div>
-        <div>
+      <form onSubmit={handleSubmit} novalidate>
+        <div className="inputwraper">
           <label htmlFor="email">Email</label>
-          <Field name="email" component="input" type="email" />
+          <Field name="email" component="input" type="emil" />
         </div>
-        <button type="submit">Submit</button>
+        <div className="inputwraper">
+          <label htmlFor="password">Password</label>
+          <Field name="password" component="input" type="password" />
+        </div>
+        <button className="submit" type="submit">
+          Submit
+        </button>
       </form>
     );
   }

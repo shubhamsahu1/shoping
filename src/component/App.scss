@@ -12,21 +12,22 @@ html {
   overflow-x: hidden;
 }
 
-.appWraper{
+.appWraper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-.mainBoby{
+.mainBoby {
   flex-grow: 1;
 }
 
-@import './header/header.scss';
-@import  './footer/footer.scss';
+@import "./header/header.scss";
+@import "./footer/footer.scss";
 
-.mainBoby{
+.mainBoby {
   position: relative;
 }
+
 @import "./home/home.scss";
 @import "./home/offer.scss";
 @import "./home/card.scss";
@@ -35,5 +36,5 @@ html {
 @import "./products/product.scss";
 @import "./cart/cart.scss";
 @import "./cart/item.scss";
-
-
+@import "./login/login.scss";
+@import "./register/register.scss";

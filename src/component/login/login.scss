@@ -1,0 +1,23 @@
+.login {
+  max-width: 1024px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  min-height: 300px;
+
+  .login-left {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 30px;
+    .login-left--header {
+      margin: 10px;
+    }
+    .login-left--sub {
+      margin: 10px;
+      font-size: 90%;
+    }
+  }
+  .login-form {
+  }
+}

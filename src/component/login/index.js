@@ -1,8 +1,16 @@
 import React from "react";
+import Login from "./form";
 
 export default () => (
   <div className="login">
-    <h1>Login</h1>
-    <p>Hello Medium......!</p>
+    <div className="login-left">
+      <h2 className="login-left--header">Login</h2>
+      <span className="login-left--sub">
+        Get access to your Order, Wishlist and Recommendations
+      </span>
+    </div>
+    <div className="login-form">
+      <Login />
+    </div>
   </div>
 );

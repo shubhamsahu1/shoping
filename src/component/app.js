@@ -6,6 +6,8 @@ import Products from "./products";
 import Header from "./header";
 import Footer from "./footer";
 import Cart from "./../component/cart";
+import Login from "./login"
+import Register from "./register"
 import "./App.scss";
 const App = props => (
   <div className="appWraper">
@@ -14,6 +16,8 @@ const App = props => (
     <main className="mainBoby">
       <Route exact path="/" component={Home} />
       <Route exact path="/product" component={Products} />
+      <Route exact path="/login" component={Login} />
+      <Route exact path="/register" component={Register} />
       {(props.cartShow)?
       <Cart />
       :null}

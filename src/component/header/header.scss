@@ -1,9 +1,8 @@
-
 .wraper {
   width: 100%;
   height: 80px;
   display: flex;
-  @include viewport(small){
+  @include viewport(small) {
     justify-content: space-between;
   }
   z-index: 10;
@@ -37,20 +36,21 @@
       a {
         margin: 0px 10px;
         color: #000000;
+        cursor: pointer;
       }
     }
   }
   .center {
     flex-grow: 2;
     display: flex;
-    @include viewport(small){
+    @include viewport(small) {
       display: none;
     }
     align-items: center;
     a {
       padding: 5px;
       margin: 10px 20px;
-      @include viewport(medium){
+      @include viewport(medium) {
         margin: 10px 5px;
       }
       &:visited,
@@ -74,12 +74,10 @@
     width: 200px;
     margin: 1px 5px;
     background: url(/static/images/logo_2x.png) no-repeat;
-    @include viewport(medium){
+    @include viewport(medium) {
       background: url(/static/images/logo.png) no-repeat;
       background-size: contain;
     }
     background-size: contain;
   }
-  
 }
-

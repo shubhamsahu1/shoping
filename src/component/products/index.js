@@ -9,7 +9,7 @@ class Products extends React.Component {
     ProductData: []
   };
   componentDidMount() {
-    this.props.getProducts()
+    this.props.getProducts();
     if (this.props.cardData.length === 0) {
       this.props.getCategories();
     }
@@ -22,16 +22,17 @@ class Products extends React.Component {
           {this.props.cardData
             .filter(data => data.enabled)
             .map((data, i) => (
-              <span
+              <a
                 className={classnames({
                   link: 1,
                   selected: filter.filterID === data.id
                 })}
                 key={i}
+                href={"#" + data.key}
                 onClick={() => setfilter(data.id)}
               >
                 {data.name}
-              </span>
+              </a>
             ))}
         </div>
         <select

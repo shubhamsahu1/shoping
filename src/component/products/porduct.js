@@ -10,9 +10,9 @@ class Product extends React.Component {
     const { name, imageURL, description, price, addToCart, id } = this.props;
     return (
       <div className="productWraper">
-        <div className="heading">
+        <a href={"javascript:void(0)"} className="heading">
           <strong>{name}</strong>
-        </div>
+        </a>
 
         <div className="productImgInfo destopTab">
           <img className="productImg" src={imageURL} alt="Smiley face"></img>
@@ -23,18 +23,24 @@ class Product extends React.Component {
           <div className="productInfoPrice">
             <div className="productInfo">{description}</div>
             <div className="priceWrap">
-              <div className="buyNow" onClick={() => addToCart(id)}>BuyNow @ Rs.{price}</div>
+              <button className="buyNow" onClick={() => addToCart(id)}>
+                BuyNow @ Rs.{price}
+              </button>
             </div>
           </div>
         </div>
         <div className="priceWrap destop">
-          <div className="productMrp">MRP Rs.{price}</div>
-          <div className="buyNow" onClick={() => addToCart(id)}>
+          <a href={"javascript:void(0)"} className="productMrp">
+            MRP Rs.{price}
+          </a>
+          <button className="buyNow" onClick={() => addToCart(id)}>
             BuyNow
-          </div>
+          </button>
         </div>
         <div className="priceWrap tab">
-          <div className="buyNow" onClick={() => addToCart(id)}>BuyNow @ Rs.{price}</div>
+          <button className="buyNow" onClick={() => addToCart(id)}>
+            BuyNow @ Rs.{price}
+          </button>
         </div>
       </div>
     );

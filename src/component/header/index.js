@@ -16,10 +16,10 @@ const Header = props => (
         <Link to="/login">SignIn</Link>
         <Link to="/register">Register</Link>
       </div>
-      <div className="cart-wraper" onClick={() => props.toggleCart()}>
+      <button className="cart-wraper" onClick={() => props.toggleCart()}>
         <img src={"/static/images/cart.svg"} alt="Smiley face"></img>
         <span>{props.totalItem} items</span>
-      </div>
+      </button>
     </div>
   </div>
 );

@@ -2,7 +2,7 @@ import React from "react";
 import Login from "./form";
 
 export default () => (
-  <div className="login">
+  <section className="login">
     <div className="login-left">
       <h2 className="login-left--header">Login</h2>
       <span className="login-left--sub">
@@ -12,5 +12,5 @@ export default () => (
     <div className="login-form">
       <Login />
     </div>
-  </div>
+  </section>
 );

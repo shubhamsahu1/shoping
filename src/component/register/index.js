@@ -2,7 +2,7 @@ import React from "react";
 import Register from "./form";
 
 export default () => (
-  <div className="register">
+  <section className="register">
     <div className="register-left">
       <h2 className="register-left--header">SignUp</h2>
       <span className="register-left--sub">
@@ -12,5 +12,5 @@ export default () => (
     <div className="register-form">
       <Register />
     </div>
-  </div>
+  </section>
 );

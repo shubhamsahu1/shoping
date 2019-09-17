@@ -17,8 +17,8 @@ class Products extends React.Component {
   render() {
     const { setfilter, filter } = this.props;
     return (
-      <div className="productPageWraper">
-        <div className="leftNav">
+      <section className="productPageWraper">
+        <nav className="leftNav">
           {this.props.cardData
             .filter(data => data.enabled)
             .map((data, i) => (
@@ -34,7 +34,7 @@ class Products extends React.Component {
                 {data.name}
               </a>
             ))}
-        </div>
+        </nav>
         <select
           className="productDrop"
           onChange={e => {
@@ -57,7 +57,7 @@ class Products extends React.Component {
             <Product key={product.id} {...product} />
           ))}
         </div>
-      </div>
+      </section>
     );
   }
 }

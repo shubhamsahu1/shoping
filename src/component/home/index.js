@@ -2,17 +2,15 @@ import React from "react";
 import { connect } from "react-redux";
 import Offer from "./offer";
 import Card from "./card";
-import {setCategories} from './../../modules'
-
+import { setCategories } from "./../../modules";
 
 class Products extends React.Component {
-  
   componentDidMount() {
-    this.props.getCategories()
+    this.props.getCategories();
   }
   render() {
     return (
-      <div className="homePageWraper">
+      <section className="homePageWraper">
         <Offer />
         <div className="shadowSaprater"></div>
         {this.props.cardData
@@ -32,19 +30,22 @@ class Products extends React.Component {
               </React.Fragment>
             ) : null
           )}
-      </div>
+      </section>
     );
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     cardData: state.api.categories
-  }
-}
+  };
+};
 const mapDispatchToProps = dispatch => {
   return {
     getCategories: () => dispatch(setCategories())
-  }
-}
-export default connect(mapStateToProps,mapDispatchToProps)(Products)
+  };
+};
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Products);

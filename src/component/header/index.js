@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { toggleCart } from "./../../modules";
 
 const Header = props => (
-  <div className="wraper">
+  <header className="wraper">
     <div className="logo"></div>
     <div className="center">
       <Link to="/">Home</Link>
@@ -21,7 +21,7 @@ const Header = props => (
         <span>{props.totalItem} items</span>
       </button>
     </div>
-  </div>
+  </header>
 );
 
 const mapStateToProps = state => ({

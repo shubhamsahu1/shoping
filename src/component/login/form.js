@@ -1,5 +1,6 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
+import { inputField } from "./../comman/input";
 const submit = e => {
   // print the form values to the console
   debugger;
@@ -10,14 +11,18 @@ class Login extends React.Component {
     const { handleSubmit } = this.props;
     return (
       <form onSubmit={handleSubmit} novalidate>
-        <div className="inputwraper">
-          <label htmlFor="email">Email</label>
-          <Field name="email" component="input" type="emil" />
-        </div>
-        <div className="inputwraper">
-          <label htmlFor="password">Password</label>
-          <Field name="password" component="input" type="password" />
-        </div>
+        <Field
+          name="username"
+          type="text"
+          component={inputField}
+          label="Username"
+        />
+        <Field
+          name="password"
+          type="password"
+          component={inputField}
+          label="Password"
+        />
         <button className="submit" type="submit">
           Submit
         </button>

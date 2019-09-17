@@ -3,6 +3,25 @@ import { Field, reduxForm } from "redux-form";
 import { push } from "connected-react-router";
 import { connect } from "react-redux";
 import { inputField } from "./../comman/input";
+const validate = values => {
+  const errors = {};
+  if (!values.username) {
+    errors.username = "Required";
+  } else if (values.username.length > 15) {
+    errors.username = "Must be 15 characters or less";
+  }
+
+  if (!values.password) {
+    errors.password = "Required";
+  } else if (values.password.length < 6) {
+    errors.password = "Minimum length 6 characters";
+  } else if (
+    !/^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$/i.test(values.password)
+  ) {
+    errors.password = "Must have a number and alphabet";
+  }
+  return errors;
+};
 const submit = (values, changePage) => {
   console.log(values);
   changePage("/");
@@ -39,7 +58,8 @@ class Login extends React.Component {
 
 const loginForm = reduxForm({
   // a unique name for the form
-  form: "login"
+  form: "login",
+  validate
 })(Login);
 
 const mapStateToProps = state => {

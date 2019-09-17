@@ -15,6 +15,6 @@ export const inputField = ({
       </span>
       <span className="inp-border"></span>
     </label>
-    {touched && error && <span>{error}</span>}
+    {touched && error && <span className="inp--error">{error}</span>}
   </div>
 );

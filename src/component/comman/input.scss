@@ -5,7 +5,11 @@
   margin-bottom: 20px;
   .inp {
     position: relative;
-
+    &--error {
+      font-size: 80%;
+      font-weight: 600;
+      color: rgb(219, 36, 36);
+    }
     &-label {
       position: absolute;
       top: 5px;

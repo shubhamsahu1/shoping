@@ -23,7 +23,7 @@
       font-size: 80%;
     }
     &--Text {
-      font-size: 70%;
+      font-size: 80%;
       text-align: center;
       margin: 5px;
       @include viewport(small) {
@@ -33,7 +33,7 @@
       }
     }
     &--btn {
-      font-size: 70%;
+      font-size: 90%;
       padding: 5px 10px;
       background-color: #bf2957;
       border: none;

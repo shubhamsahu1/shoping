@@ -24,7 +24,7 @@ class Product extends React.Component {
             <div className="productInfo">{description}</div>
             <div className="priceWrap">
               <button className="buyNow" onClick={() => addToCart(id)}>
-                BuyNow @ Rs.{price}
+                Buy Now @ Rs.{price}
               </button>
             </div>
           </div>
@@ -32,12 +32,12 @@ class Product extends React.Component {
         <div className="priceWrap destop">
           <span className="productMrp">MRP Rs.{price}</span>
           <button className="buyNow" onClick={() => addToCart(id)}>
-            BuyNow
+            Buy Now
           </button>
         </div>
         <div className="priceWrap tab">
           <button className="buyNow" onClick={() => addToCart(id)}>
-            BuyNow @ Rs.{price}
+            Buy Now @ Rs.{price}
           </button>
         </div>
       </div>

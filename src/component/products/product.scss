@@ -1,5 +1,4 @@
 .productWraper {
-  
   width: 25%;
   box-shadow: 0px 1px 4px #eeeeee;
   font-size: 80%;
@@ -29,29 +28,27 @@
     }
     .productInfo {
       background-color: #eeeeee;
-      font-size: 80%;
+      font-size: 90%;
       text-align: left;
       padding: 3px;
     }
-   
-    
-    &.destopTab{
+
+    &.destopTab {
       display: block;
       @include viewport(small) {
         display: none;
       }
     }
-    &.mobile{
+    &.mobile {
       display: none;
       @include viewport(small) {
         display: flex;
       }
     }
-    
+
     @include viewport(small) {
       margin: 20px 5px 5px 5px;
     }
-    
   }
   .priceWrap {
     display: flex;
@@ -73,9 +70,9 @@
       }
     }
   }
-  
+
   .tab {
-     @include viewport(ipadOnly) {
+    @include viewport(ipadOnly) {
       display: block;
     }
     display: none;
@@ -102,5 +99,3 @@
     }
   }
 }
-
-

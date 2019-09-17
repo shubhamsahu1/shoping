@@ -20,7 +20,8 @@
   }
   .login-form {
     flex-grow: 1;
-    margin: 0 40px 0 20px;
+    max-width: 350px;
+    margin: 30px 40px;
     .inputwraper {
       display: flex;
       flex-direction: column;

@@ -1,0 +1,42 @@
+.register {
+  max-width: 1024px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  min-height: 300px;
+
+  .register-left {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 30px;
+    .register-left--header {
+      margin: 10px;
+    }
+    .register-left--sub {
+      margin: 10px;
+      font-size: 90%;
+    }
+  }
+  .register-form {
+    flex-grow: 1;
+    max-width: 350px;
+    margin: 30px 40px;
+    .inputwraper {
+      display: flex;
+      flex-direction: column;
+    }
+    .submit {
+      display: inline-block;
+      border: none;
+      width: 100%;
+      padding: 10px;
+      margin: 20px 0;
+      text-decoration: none;
+      background: #bf2957;
+      color: #ffffff;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Item from "./item";
-import { toggleCart, checkout } from "./../../modules";
+import { toggleCart, checkout } from "./../../reducers";
 //import classnames from "classnames";
 
 class Cart extends React.Component {
@@ -41,9 +41,12 @@ class Cart extends React.Component {
               </div>
             </React.Fragment>
           ) : (
-            <div className="cart-footer-checkout cart-footer--start" onClick={() => checkout()}>
-                <span>Start Shopping</span>
-              </div>
+            <div
+              className="cart-footer-checkout cart-footer--start"
+              onClick={() => checkout()}
+            >
+              <span>Start Shopping</span>
+            </div>
           )}
         </div>
       </div>

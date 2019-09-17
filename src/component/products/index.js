@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import classnames from "classnames";
 import Product from "./porduct";
-import { setCategories, setProdusts, setFilterId } from "./../../modules";
+import { setCategories, setProdusts, setFilterId } from "./../../reducers";
 
 class Products extends React.Component {
   state = {

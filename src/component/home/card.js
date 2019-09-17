@@ -3,7 +3,7 @@ import { push } from "connected-react-router";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import classnames from "classnames";
-import { setFilterId } from "./../../modules";
+import { setFilterId } from "./../../reducers";
 const btnClick = props => {
   props.setfilter(props.cardId);
   props.changePage();

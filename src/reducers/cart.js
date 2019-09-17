@@ -7,7 +7,7 @@ const initialState = {
   cartData: [],
   totalItem: 0,
   cartShow: false,
-  cartTotal:0
+  cartTotal: 0
 };
 
 export default (state = initialState, action) => {
@@ -27,11 +27,11 @@ export default (state = initialState, action) => {
         ...state,
         cartShow: action.payload
       };
-      case CART_TOTAL:
-        return {
-          ...state,
-          cartTotal: action.payload
-        };
+    case CART_TOTAL:
+      return {
+        ...state,
+        cartTotal: action.payload
+      };
 
     default:
       return state;
@@ -58,7 +58,7 @@ export const addToCart = id => {
       type: TOTAL_CART_ITEM,
       payload: total
     });
-    dispatch(cartTotal())
+    dispatch(cartTotal());
   };
 };
 export const removeFromCart = id => {
@@ -77,7 +77,7 @@ export const removeFromCart = id => {
       type: TOTAL_CART_ITEM,
       payload: total
     });
-    dispatch(cartTotal())
+    dispatch(cartTotal());
   };
 };
 
@@ -92,7 +92,7 @@ export const toggleCart = () => {
 export const cartTotal = () => {
   return (dispatch, getState) => {
     let storeCart = getState().cart.cartData;
-    const totalVal = storeCart.reduce((a, c) => a + c.item.price*c.qty, 0);
+    const totalVal = storeCart.reduce((a, c) => a + c.item.price * c.qty, 0);
     dispatch({
       type: CART_TOTAL,
       payload: totalVal

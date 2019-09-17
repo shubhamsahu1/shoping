@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addToCart } from "./../../modules";
+import { addToCart } from "./../../reducers";
 
 class Product extends React.Component {
   state = {};

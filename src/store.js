@@ -3,7 +3,7 @@ import { connectRouter, routerMiddleware } from "connected-react-router";
 import { reducer as formReducer } from "redux-form";
 import thunk from "redux-thunk";
 import createHistory from "history/createBrowserHistory";
-import reducers from "./modules";
+import reducers from "./reducers";
 
 export const history = createHistory();
 

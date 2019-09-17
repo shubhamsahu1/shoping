@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Offer from "./offer";
 import Card from "./card";
-import { setCategories } from "./../../modules";
+import { setCategories } from "./../../reducers";
 
 class Products extends React.Component {
   componentDidMount() {

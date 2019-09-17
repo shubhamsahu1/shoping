@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addToCart, removeFromCart } from "./../../modules";
+import { addToCart, removeFromCart } from "./../../reducers";
 //import classnames from "classnames";
 
 class Item extends React.Component {

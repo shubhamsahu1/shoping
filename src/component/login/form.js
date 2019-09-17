@@ -1,16 +1,22 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
+import { push } from "connected-react-router";
+import { connect } from "react-redux";
 import { inputField } from "./../comman/input";
-const submit = e => {
-  // print the form values to the console
-  debugger;
-  console.log(e);
+const submit = (values, changePage) => {
+  console.log(values);
+  changePage("/");
 };
 class Login extends React.Component {
   render() {
-    const { handleSubmit } = this.props;
+    const { handleSubmit, changePage } = this.props;
     return (
-      <form onSubmit={handleSubmit} novalidate>
+      <form
+        onSubmit={handleSubmit(values => {
+          submit(values, changePage);
+        })}
+        noValidate
+      >
         <Field
           name="username"
           type="text"
@@ -33,8 +39,19 @@ class Login extends React.Component {
 
 const loginForm = reduxForm({
   // a unique name for the form
-  form: "login",
-  onSubmit: submit
+  form: "login"
 })(Login);
 
-export default loginForm;
+const mapStateToProps = state => {
+  return {};
+};
+const mapDispatchToProps = dispatch => {
+  return {
+    changePage: () => dispatch(push("/"))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(loginForm);

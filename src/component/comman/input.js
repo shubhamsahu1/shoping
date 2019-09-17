@@ -7,10 +7,10 @@ export const inputField = ({
   meta: { touched, error }
 }) => (
   <div className="inputWraper">
-    <label for="inp" class="inp">
+    <label htmlFor="inp" className="inp">
       <input {...input} placeholder="&nbsp;" type={type} />
-      <span class="label">{label}</span>
-      <span class="border"></span>
+      <span className="label">{label}</span>
+      <span className="border"></span>
     </label>
 
     {touched && error && <span>{error}</span>}

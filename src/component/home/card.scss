@@ -1,16 +1,16 @@
-.CardWraper {
+.Card {
   width: 100%;
   display: flex;
   z-index: 10;
   align-items: center;
-  .CardImg {
+  &--Img {
     width: 33%;
     margin: 0 5%;
     @include viewport(small) {
       height: 100%;
     }
   }
-  .info {
+  &-info {
     margin: 15px;
     display: flex;
     flex-direction: column;
@@ -22,34 +22,33 @@
       margin: 15px 5px;
       font-size: 80%;
     }
-  }
-  .infoText {
-    font-size: 70%;
-    text-align: center;
-    margin: 5px;
-    @include viewport(small) {
+    &--Text {
       font-size: 70%;
       text-align: center;
-      margin: 5px 0;
+      margin: 5px;
+      @include viewport(small) {
+        font-size: 70%;
+        text-align: center;
+        margin: 5px 0;
+      }
     }
-  }
-  .btn {
-    font-size: 70%;
-    padding: 5px 10px;
-    background-color: #bf2957;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    &:hover {
-      background-color: #a1143f;
-    }
-    @include viewport(small) {
+    &--btn {
       font-size: 70%;
+      padding: 5px 10px;
+      background-color: #bf2957;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      &:hover {
+        background-color: #a1143f;
+      }
+      @include viewport(small) {
+        font-size: 70%;
+      }
     }
   }
-}
-
-.revs {
-  flex-direction: row-reverse;
+  &--revs {
+    flex-direction: row-reverse;
+  }
 }

@@ -1,7 +1,7 @@
-.homePageWraper {
+.home {
   max-width: 1024px;
   margin: 0 auto;
-  .shadowSaprater {
+  &-shadowSaprater {
     height: 1px;
     box-shadow: 0px 1px 2px 0px #d0d0d0;
     position: relative;

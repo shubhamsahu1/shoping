@@ -10,9 +10,9 @@ class Products extends React.Component {
   }
   render() {
     return (
-      <section className="homePageWraper">
+      <section className="home">
         <Offer />
-        <div className="shadowSaprater"></div>
+        <div className="home-shadowSaprater"></div>
         {this.props.cardData
           .sort((a, b) => a.order - b.order)
           .map(card =>
@@ -26,7 +26,7 @@ class Products extends React.Component {
                   rowRev={card.order % 2}
                   cardId={card.id}
                 />
-                <div className="shadowSaprater"></div>
+                <div className="home-shadowSaprater"></div>
               </React.Fragment>
             ) : null
           )}

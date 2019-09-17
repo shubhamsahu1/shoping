@@ -9,25 +9,25 @@
     align-items: stretch;
     margin: auto;
   }
-  .register-left {
+  &-left {
     display: flex;
     flex-direction: column;
     align-content: center;
     margin: 30px;
-    .register-left--header {
+    &--header {
       margin: 10px;
     }
-    .register-left--sub {
+    &--sub {
       margin: 10px;
       font-size: 90%;
     }
   }
-  .register-form {
+  &-form {
     flex-grow: 1;
     max-width: 350px;
     margin: 30px 40px;
 
-    .submit {
+    &--submit {
       display: inline-block;
       border: none;
       width: 100%;

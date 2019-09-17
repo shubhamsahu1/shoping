@@ -10,10 +10,10 @@ export const inputField = ({
   <div className="inputWraper">
     <label htmlFor={name} className="inp">
       <input {...input} id={name} placeholder="&nbsp;" type={type} />
-      <span htmlFor={name} className="label">
+      <span htmlFor={name} className="inp-label">
         {label}
       </span>
-      <span className="border"></span>
+      <span className="inp-border"></span>
     </label>
     {touched && error && <span>{error}</span>}
   </div>

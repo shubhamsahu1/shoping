@@ -9,24 +9,24 @@
     align-items: stretch;
     margin: auto;
   }
-  .login-left {
+  &-left {
     display: flex;
     flex-direction: column;
     align-content: center;
     margin: 30px;
-    .login-left--header {
+    &--header {
       margin: 10px;
     }
-    .login-left--sub {
+    &--sub {
       margin: 10px;
       font-size: 90%;
     }
   }
-  .login-form {
+  &-form {
     flex-grow: 1;
     max-width: 350px;
     margin: 30px 40px;
-    .submit {
+    &--submit {
       display: inline-block;
       border: none;
       width: 100%;

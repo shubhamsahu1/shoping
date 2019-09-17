@@ -26,15 +26,16 @@ class Offer extends React.Component {
   }
   render() {
     return (
-      <div>
-        <div className="content display-container">
+      <section>
+        <div className="content">
           {[1, 2, 3, 4, 5].map((val, i) => {
             return (
               <img
                 key={val}
                 className={classnames({
-                  show: this.state.slideIndex === val,
-                  animateFading: 1
+                  "content-show": this.state.slideIndex === val,
+                  animateFading: 1,
+                  "content-img": 1
                 })}
                 alt={`offer${val}`}
                 src={`/static/images/offers/offer${val}.jpg`}
@@ -43,24 +44,21 @@ class Offer extends React.Component {
             );
           })}
 
-          <div className="nav-container" style={{ width: "100%" }}>
-            <div className="left arrow" onClick={() => this.plusDivs(-1)}>
+          <div className="nav" style={{ width: "100%" }}>
+            <div className="nav--arrow left" onClick={() => this.plusDivs(-1)}>
               PREV
             </div>
-            <div className="right arrow" onClick={() => this.plusDivs(1)}>
+            <div className="nav--arrow right" onClick={() => this.plusDivs(1)}>
               NEXT
             </div>
           </div>
-          <div
-            className="nav-container nav-container-badge"
-            style={{ width: "100%" }}
-          >
+          <div className="nav nav-badge" style={{ width: "100%" }}>
             {[1, 2, 3, 4, 5].map((val, i) => {
               return (
                 <span
                   className={classnames({
-                    badgeSelected: this.state.slideIndex === val,
-                    badge: 1
+                    "nav--badge--selected": this.state.slideIndex === val,
+                    "nav--badge": 1
                   })}
                   key={val}
                   onClick={() => this.currentDiv(val)}
@@ -69,7 +67,7 @@ class Offer extends React.Component {
             })}
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

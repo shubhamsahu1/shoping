@@ -29,7 +29,7 @@ class Login extends React.Component {
           component={inputField}
           label="Password"
         />
-        <button className="submit" type="submit">
+        <button className="login-form--submit" type="submit">
           Submit
         </button>
       </form>

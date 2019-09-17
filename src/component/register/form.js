@@ -42,7 +42,7 @@ class Register extends React.Component {
           component={inputField}
           label="Confirm Password"
         />
-        <button className="submit" type="submit">
+        <button className="register-form--submit" type="submit">
           Submit
         </button>
       </form>

@@ -18,15 +18,15 @@
     top: -80px;
     height: 100vh;
   }
-  .cart-footer {
+  &-footer {
     background-color: white;
     text-align: center;
     margin-bottom: 10px;
-    .cart-footer--promo {
+    &--promo {
       font-size: 80%;
       padding: 5px;
     }
-    .cart-footer-checkout {
+    &-checkout {
       margin: 5px;
       background-color: #bf2957;
       color: white;
@@ -36,31 +36,31 @@
       justify-content: space-between;
       cursor: pointer;
     }
-    .cart-footer--start{
+    &--start {
       justify-content: center;
     }
   }
-  .cart-items {
+  &-items {
     flex-grow: 1;
     overflow-y: auto;
   }
-  .cart-noItem{
+  &-noItem {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: -40px;
-    .cart-noItem--header{
+    &--header {
       font-size: 100%;
       font-weight: 600;
     }
-    .cart-noItem--sub{
+    &--sub {
       font-size: 80%;
-      font-weight:300;
+      font-weight: 300;
     }
   }
-  .cart-myCart {
+  &-myCart {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,10 +69,10 @@
     background-color: #1d2124;
     color: white;
     padding: 0 15px;
-    .cart-myCart--head {
+    &--head {
       font-weight: 500;
     }
-    .cart-myCart--sub {
+    &--sub {
       margin-left: 5px;
       font-weight: 400;
       font-size: 80%;
@@ -85,24 +85,24 @@
       height: 32px;
       opacity: 0.3;
       cursor: pointer;
-    }
-    .close:hover {
-      opacity: 1;
-    }
-    .close:before,
-    .close:after {
-      position: absolute;
-      left: 15px;
-      content: " ";
-      height: 25px;
-      width: 2px;
-      background-color: rgb(255, 255, 255);
-    }
-    .close:before {
-      transform: rotate(45deg);
-    }
-    .close:after {
-      transform: rotate(-45deg);
+      &:hover {
+        opacity: 1;
+      }
+      &:before,
+      &:after {
+        position: absolute;
+        left: 15px;
+        content: " ";
+        height: 25px;
+        width: 2px;
+        background-color: rgb(255, 255, 255);
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
     }
   }
 }

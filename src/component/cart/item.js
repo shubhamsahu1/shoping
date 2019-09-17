@@ -10,8 +10,8 @@ class Item extends React.Component {
     const { cart, addToCart, removeFromCart } = this.props;
     return (
       <div className="itemWraper">
-        {cart.cartData.map(data => (
-          <div className="item">
+        {cart.cartData.map((data, i) => (
+          <div key={i} className="item">
             <img
               className="item--image"
               src={data.item.imageURL}

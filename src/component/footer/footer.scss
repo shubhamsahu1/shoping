@@ -1,8 +1,8 @@
-.footer{
-    font-size: 90%;
-    text-align: center;
-    background-color: #eeeeee;
-    @include viewport(small){
-        font-size: 70%;  
-      }
+.footer {
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: #eeeeee;
+  @include viewport(small) {
+    font-size: 1.6rem;
+  }
 }

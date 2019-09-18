@@ -20,20 +20,20 @@
     text-align: center;
     @include viewport(small) {
       margin: 15px 5px;
-      font-size: 80%;
+      font-size: 1.6rem;
     }
     &--Text {
-      font-size: 80%;
+      font-size: 1.6rem;
       text-align: center;
       margin: 5px;
       @include viewport(small) {
-        font-size: 70%;
+        font-size: 1.6rem;
         text-align: center;
         margin: 5px 0;
       }
     }
     &--btn {
-      font-size: 90%;
+      font-size: 1.6rem;
       padding: 5px 10px;
       background-color: #bf2957;
       border: none;
@@ -44,7 +44,7 @@
         background-color: #a1143f;
       }
       @include viewport(small) {
-        font-size: 70%;
+        font-size: 1.6rem;
       }
     }
   }

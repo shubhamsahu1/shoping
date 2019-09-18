@@ -15,7 +15,7 @@
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      font-size: 80%;
+      font-size: 1.6rem;
       margin-left: 25px;
       justify-content: center;
       .item-info--heading {
@@ -35,7 +35,7 @@
     }
     .item-total {
       font-weight: 500;
-      font-size: 110%;
+      font-size: 1.8rem;
     }
   }
   .item-lowest {
@@ -47,10 +47,10 @@
     margin: 10px;
     padding: 10px;
     @include viewport(medium) {
-      font-size: 90%;
+      font-size: 1.6rem;
     }
     @include viewport(small) {
-      font-size: 80%;
+      font-size: 1.6rem;
     }
   }
 }

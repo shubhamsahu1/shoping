@@ -1,12 +1,15 @@
 .productWraper {
   width: 25%;
   box-shadow: 0px 1px 4px #eeeeee;
-  font-size: 80%;
+  font-size: 1.6rem;
   text-align: center;
   padding: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  .heading {
+    font-size: 1.6rem;
+  }
   @include viewport(medium) {
     width: 50%;
   }
@@ -28,7 +31,7 @@
     }
     .productInfo {
       background-color: #eeeeee;
-      font-size: 90%;
+      font-size: 1.4rem;
       text-align: left;
       padding: 3px;
     }

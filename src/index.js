@@ -1,15 +1,14 @@
-import 'react-app-polyfill/ie9';
-import 'react-app-polyfill/stable';
-import React from 'react'
-import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import { ConnectedRouter } from 'connected-react-router'
-import store, { history } from './store'
-import App from './component/app'
-import './index.scss'
+import "react-app-polyfill/ie9";
+import "react-app-polyfill/stable";
+import React from "react";
+import { render } from "react-dom";
+import { Provider } from "react-redux";
+import { ConnectedRouter } from "connected-react-router";
+import store, { history } from "./store";
+import App from "./component/app";
+import "./scss/index.scss";
 
-
-const target = document.querySelector('#root')
+const target = document.querySelector("#root");
 
 render(
   <Provider store={store}>
@@ -20,4 +19,4 @@ render(
     </ConnectedRouter>
   </Provider>,
   target
-)
+);

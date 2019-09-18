@@ -1,41 +1,9 @@
-@import "./_mixins.scss";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 18px;
-  width: 100%;
-  overflow-x: hidden;
-}
-
 .appWraper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  .mainBody {
+    flex-grow: 1;
+    position: relative;
+  }
 }
-.mainBoby {
-  flex-grow: 1;
-}
-
-@import "./header/header.scss";
-@import "./footer/footer.scss";
-
-.mainBoby {
-  position: relative;
-}
-
-@import "./comman/input.scss";
-@import "./home/home.scss";
-@import "./home/offer.scss";
-@import "./home/card.scss";
-
-@import "./products/products.scss";
-@import "./products/product.scss";
-@import "./cart/cart.scss";
-@import "./cart/item.scss";
-@import "./login/login.scss";
-@import "./register/register.scss";

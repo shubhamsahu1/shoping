@@ -1,0 +1,17 @@
+@import "./base.scss";
+@import "./_mixins.scss";
+@import "./../component/App.scss";
+@import "./../component/header/header.scss";
+@import "./../component/footer/footer.scss";
+
+@import "./../component/comman/input.scss";
+@import "./../component/home/home.scss";
+@import "./../component/home/offer.scss";
+@import "./../component/home/card.scss";
+
+@import "./../component/products/products.scss";
+@import "./../component/products/product.scss";
+@import "./../component/cart/cart.scss";
+@import "./../component/cart/item.scss";
+@import "./../component/login/login.scss";
+@import "./../component/register/register.scss";

@@ -31,12 +31,12 @@
   left: 50%;
   bottom: 50%;
   transform: translate(-50%, 100%);
-
+  font-size: 1.4rem;
   &--arrow {
     cursor: pointer;
-    color: white;
+    color: map-get($theme-colors, "white");
     padding: 10px 10px;
-    background-color: black;
+    background-color: map-get($theme-colors, "black");
     opacity: 0.1;
     transition: opacity 0.2s;
     &.left {

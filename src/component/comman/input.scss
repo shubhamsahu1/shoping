@@ -6,27 +6,27 @@
   .inp {
     position: relative;
     &--error {
-      font-size: 80%;
       font-weight: 600;
-      color: rgb(219, 36, 36);
+      color: map-get($theme-colors, "error");
+      font-size: 1.4rem;
     }
     &-label {
       position: absolute;
       top: 5px;
       left: 0;
       font-size: 1.6rem;
-      color: #9098a9;
+      color: map-get($input-colors, "secondary");
       font-weight: 500;
       transform-origin: 0 0;
       transition: all 0.2s ease;
     }
     &-border {
       position: absolute;
-      bottom: -14px;
+      bottom: -17px;
       left: 0;
       height: 2px;
       width: 100%;
-      background: #0077ff;
+      background: map-get($input-colors, "primary");
       transform: scaleX(0);
       transform-origin: 0 0;
       transition: all 0.15s ease;
@@ -40,17 +40,17 @@
       height: 48px;
       font-size: 1.6rem;
       font-weight: 500;
-      border-bottom: 2px solid #c8ccd4;
+      border-bottom: 2px solid map-get($input-colors, "border");
       background: none;
       border-radius: 0;
-      color: #223254;
+      color: map-get($input-colors, "black");
       transition: all 0.15s ease;
       &:hover {
-        background: rgba(#223254, 0.03);
+        background: rgba(map-get($input-colors, "background"), 0.03);
       }
       &:not(:placeholder-shown) {
         + span {
-          color: #5a667f;
+          color: map-get($input-colors, "black");
           transform: translateY(-26px) scale(0.75);
         }
       }
@@ -58,9 +58,9 @@
         background: none;
         outline: none;
         + span {
-          color: #0077ff;
+          color: map-get($input-colors, "primary");
           transform: translateY(-26px) scale(0.75);
-          + .border {
+          + .inp-border {
             transform: scaleX(1);
           }
         }

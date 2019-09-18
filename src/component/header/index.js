@@ -6,7 +6,11 @@ import { toggleCart } from "./../../reducers";
 
 const Header = props => (
   <header className="wraper">
-    <div className="logo"></div>
+    <img
+      src={"/static/images/logo.png"}
+      className="logo"
+      alt="sabka bajaar"
+    ></img>
     <div className="center">
       <Link to="/">Home</Link>
       <Link to="/product">Product</Link>
@@ -17,7 +21,7 @@ const Header = props => (
         <Link to="/register">Register</Link>
       </div>
       <button className="cart-wraper" onClick={() => props.toggleCart()}>
-        <img src={"/static/images/cart.svg"} alt="Smiley face"></img>
+        <img src={"/static/images/cart.svg"} alt="cart"></img>
         <span>{props.totalItem} items</span>
       </button>
     </div>

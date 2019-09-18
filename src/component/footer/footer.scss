@@ -1,7 +1,7 @@
 .footer {
   font-size: 1.6rem;
   text-align: center;
-  background-color: #eeeeee;
+  background-color: map-get($theme-colors, "background");
   @include viewport(small) {
     font-size: 1.6rem;
   }

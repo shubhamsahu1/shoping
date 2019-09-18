@@ -22,7 +22,7 @@
     flex-grow: 1;
     justify-content: center;
     align-items: center;
-    background-color: #eeeeee;
+    background-color: map-get($theme-colors, "background");
     font-weight: 400;
     img {
       width: 20px;
@@ -36,7 +36,7 @@
       margin: 3px 2px;
       a {
         margin: 0px 10px;
-        color: #000000;
+        color: map-get($theme-colors, "black");
         cursor: pointer;
       }
     }
@@ -58,16 +58,14 @@
       }
       &:visited,
       &:link {
-        color: #000000;
+        color: map-get($theme-colors, "black");
         text-decoration: none;
         padding-bottom: 1px;
-        border-bottom: 1px solid #3a3430;
-        -webkit-transition: border-bottom 0.2s, color 0.2s;
+        border-bottom: 1px solid map-get($theme-colors, "black");
         transition: border-bottom 0.2s, color 0.2s;
       }
       &:hover,
       :active {
-        color: rgb(70, 56, 56);
         border-bottom: 1px solid transparent;
       }
     }
@@ -76,11 +74,6 @@
   .logo {
     width: 200px;
     margin: 1px 5px;
-    background: url(/static/images/logo_2x.png) no-repeat;
-    @include viewport(medium) {
-      background: url(/static/images/logo.png) no-repeat;
-      background-size: contain;
-    }
     background-size: contain;
   }
 }

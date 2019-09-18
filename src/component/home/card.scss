@@ -35,13 +35,13 @@
     &--btn {
       font-size: 1.6rem;
       padding: 5px 10px;
-      background-color: #bf2957;
+      background-color: map-get($theme-colors, "primary");
       border: none;
       border-radius: 5px;
-      color: white;
+      color: map-get($theme-colors, "white");
       cursor: pointer;
       &:hover {
-        background-color: #a1143f;
+        background-color: map-get($theme-colors, "primary_hover");
       }
       @include viewport(small) {
         font-size: 1.6rem;

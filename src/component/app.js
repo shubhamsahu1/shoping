@@ -13,7 +13,7 @@ const App = props => (
   <div className="appWraper">
     <Header />
 
-    <main className="mainBody">
+    <main className="main">
       <Route exact path="/" component={Home} />
       <Route exact path="/product" component={Products} />
       <Route exact path="/login" component={Login} />

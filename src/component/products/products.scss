@@ -6,7 +6,7 @@
   align-items: stretch;
   .leftNav {
     width: 25%;
-    background-color: #eeeeee;
+    background-color: map-get($theme-colors, "background");
     .link {
       display: block;
       text-decoration: none;
@@ -37,11 +37,11 @@
       display: block;
       height: 40px;
       padding: 0 25px;
-      background-color: #bf2957;
-      background: #bf2957 url(/static/down_black.png) no-repeat right 0.75rem
-        center;
+      background-color: map-get($theme-colors, "primary");
+      background: map-get($theme-colors, "primary") url(/static/down_black.png)
+        no-repeat right 0.75rem center;
       background-size: 30px;
-      color: white;
+      color: map-get($theme-colors, "white");
       -webkit-appearance: none;
       border: 0;
       z-index: 10;

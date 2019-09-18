@@ -28,12 +28,12 @@ input[type="reset"] {
 }
 
 a {
-  color: #000000;
+  color: map-get($theme-colors, "black");
   text-decoration: none;
 }
 
 a:hover {
-  color: #000000;
+  color: map-get($theme-colors, "black");
   text-decoration: none;
   cursor: auto;
 }

@@ -18,22 +18,20 @@
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    font-size: 1.6rem;
     @include viewport(small) {
       margin: 15px 5px;
-      font-size: 1.6rem;
     }
     &--Text {
-      font-size: 1.6rem;
       text-align: center;
       margin: 5px;
+      font-size: 1.5rem;
       @include viewport(small) {
-        font-size: 1.6rem;
         text-align: center;
         margin: 5px 0;
       }
     }
     &--btn {
-      font-size: 1.6rem;
       padding: 5px 10px;
       background-color: map-get($theme-colors, "primary");
       border: none;
@@ -42,9 +40,6 @@
       cursor: pointer;
       &:hover {
         background-color: map-get($theme-colors, "primary_hover");
-      }
-      @include viewport(small) {
-        font-size: 1.6rem;
       }
     }
   }

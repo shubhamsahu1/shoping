@@ -13,12 +13,12 @@
       color: #555555;
       padding: 10px 20px;
       font-size: 1.6rem;
-      border-bottom: 2px solid #d8d8d8;
+      border-bottom: 2px solid map-get($theme-colors, "border");
       &:hover {
-        background-color: #dddddd;
+        background-color: map-get($theme-colors, "background-hover");
       }
       &.selected {
-        background-color: #dddddd;
+        background-color: map-get($theme-colors, "background-hover");
       }
     }
 

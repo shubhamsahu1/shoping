@@ -9,18 +9,11 @@
     align-items: stretch;
     margin: auto;
   }
-  &-left {
+  &-info {
     display: flex;
     flex-direction: column;
     align-content: center;
     margin: 30px;
-    &--header {
-      margin: 10px;
-    }
-    &--sub {
-      margin: 10px;
-      font-size: 1.6rem;
-    }
   }
   &-form {
     flex-grow: 1;

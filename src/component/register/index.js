@@ -3,9 +3,9 @@ import Register from "./form";
 
 export default () => (
   <section className="register">
-    <div className="register-left">
-      <h2 className="register-left--header">SignUp</h2>
-      <span className="register-left--sub">
+    <div className="register-info">
+      <h2 className="title title-primary">SignUp</h2>
+      <span className="title title-secondary">
         We do not share your personal details with anyone
       </span>
     </div>

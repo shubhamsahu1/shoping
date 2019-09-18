@@ -3,9 +3,9 @@ import Login from "./form";
 
 export default () => (
   <section className="login">
-    <div className="login-left">
-      <h2 className="login-left--header">Login</h2>
-      <span className="login-left--sub">
+    <div className="login-info">
+      <h2 className="title title-primary">Login</h2>
+      <span className="title title-secondary">
         Get access to your Order, Wishlist and Recommendations
       </span>
     </div>

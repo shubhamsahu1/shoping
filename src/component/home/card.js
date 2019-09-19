@@ -10,7 +10,7 @@ const btnClick = props => {
 };
 const Card = props => (
   <section className={classnames({ Card: 1, "Card--revs": props.rowRev })}>
-    <img className="Card--Img" src={props.url} alt="Smiley face"></img>
+    <img className="Card--Img" src={props.url} alt={props.info}></img>
     <div className="Card-info">
       <span>
         <strong>{props.heading}</strong>

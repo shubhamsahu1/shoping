@@ -15,7 +15,7 @@ class Item extends React.Component {
             <img
               className="item--image"
               src={data.item.imageURL}
-              alt="Smiley face"
+              alt={data.item.description}
             ></img>
             <div className="item-info">
               <div className="item-info--heading">{data.item.name}</div>
@@ -23,7 +23,7 @@ class Item extends React.Component {
                 <img
                   src="/static/remove.png"
                   className="item-info-qty--icon"
-                  alt="remove"
+                  alt="remove item"
                   onClick={() => removeFromCart(data.item.id)}
                 ></img>
 
@@ -31,10 +31,10 @@ class Item extends React.Component {
                 <img
                   src="/static/add.png"
                   className="item-info-qty--icon"
-                  alt="remove"
+                  alt="add one more item"
                   onClick={() => addToCart(data.item.id)}
                 ></img>
-                <img src="/static/close.png" alt="remove"></img>
+                <img src="/static/close.png" alt="close Cart"></img>
                 <span>Rs. {data.item.price}</span>
                 <span className="item-total">
                   Rs. {data.item.price * data.qty}
@@ -44,7 +44,7 @@ class Item extends React.Component {
           </div>
         ))}
         <div className="item-lowest">
-          <img src="static/images/lowest-price.png" alt="remove"></img>
+          <img src="static/images/lowest-price.png" alt="lowest-price"></img>
           <span>You won't find cheaper anywhere</span>
         </div>
       </div>

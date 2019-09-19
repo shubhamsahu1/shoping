@@ -15,13 +15,13 @@ class Product extends React.Component {
         </h4>
 
         <div className="productImgInfo destopTab">
-          <img className="productImg" src={imageURL} alt="Smiley face"></img>
-          <div className="productInfo">{description}</div>
+          <img className="productImg" src={imageURL} alt={name}></img>
+          <div className="productInfo">{description + " image"}</div>
         </div>
         <div className="productImgInfo mobile">
-          <img className="productImg" src={imageURL} alt="Smiley face"></img>
+          <img className="productImg" src={imageURL} alt={name}></img>
           <div className="productInfoPrice">
-            <div className="productInfo">{description}</div>
+            <div className="productInfo">{description + " image"}</div>
             <div className="priceWrap">
               <button className="buyNow" onClick={() => addToCart(id)}>
                 Buy Now @ Rs.{price}

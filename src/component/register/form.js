@@ -2,7 +2,7 @@ import React from "react";
 import { Field, reduxForm } from "redux-form";
 import { push } from "connected-react-router";
 import { connect } from "react-redux";
-import { inputField } from "./../comman/input";
+import { inputField } from "./../common/input";
 const submit = (values, changePage) => {
   console.log(values);
   changePage("/");

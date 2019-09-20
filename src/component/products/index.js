@@ -41,6 +41,7 @@ class Products extends React.Component {
             setfilter(e.target.value);
           }}
         >
+          <option value="">Reset</option>
           {this.props.cardData
             .filter(data => data.enabled)
             .map(data => (

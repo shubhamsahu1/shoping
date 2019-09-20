@@ -3,6 +3,6 @@
   text-align: center;
   background-color: map-get($theme-colors, "background");
   @include viewport(small) {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }

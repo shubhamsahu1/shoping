@@ -8,13 +8,13 @@
     &--error {
       font-weight: 600;
       color: map-get($theme-colors, "error");
-      font-size: 1.4rem;
+      font-size: calculate-rem(14px);
     }
     &-label {
       position: absolute;
       top: 5px;
       left: 0;
-      font-size: 1.6rem;
+      font-size: calculate-rem(16px);
       color: map-get($input-colors, "secondary");
       font-weight: 500;
       transform-origin: 0 0;
@@ -38,7 +38,7 @@
       font-family: inherit;
       padding: 12px 0;
       height: 48px;
-      font-size: 1.6rem;
+      font-size: calculate-rem(16px);
       font-weight: 500;
       border-bottom: 2px solid map-get($input-colors, "border");
       background: none;

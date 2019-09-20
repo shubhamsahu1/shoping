@@ -17,7 +17,7 @@
   .cart-wraper {
     display: flex;
     position: relative;
-    font-size: 1.8rem;
+    font-size: calculate-rem(18px);
     outline: inherit;
     flex-grow: 1;
     justify-content: center;
@@ -32,7 +32,7 @@
     display: flex;
     flex-direction: column;
     .loginSection {
-      font-size: 1.6rem;
+      font-size: calculate-rem(16px);
       margin: 3px 2px;
       a {
         margin: 0px 10px;
@@ -44,7 +44,7 @@
   .center {
     flex-grow: 2;
     display: flex;
-    font-size: 1.8rem;
+    font-size: calculate-rem(18px);
     @include viewport(small) {
       display: none;
     }

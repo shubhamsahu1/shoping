@@ -31,7 +31,7 @@
       color: map-get($theme-colors, "white");
       cursor: pointer;
       text-align: center;
-      font-size: 1.6rem;
+      font-size: calculate-rem(16px);
     }
   }
 }

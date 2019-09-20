@@ -17,9 +17,9 @@
     background-color: map-get($theme-colors, "white");
     text-align: center;
     margin-bottom: 10px;
-    font-size: 1.6rem;
+    font-size: calculate-rem(16px);
     &--promo {
-      font-size: 1.6rem;
+      font-size: calculate-rem(16px);
       padding: 5px;
     }
     &-checkout {
@@ -48,11 +48,11 @@
     justify-content: center;
     margin-top: -40px;
     &--header {
-      font-size: 1.8rem;
+      font-size: calculate-rem(18px);
       font-weight: 600;
     }
     &--sub {
-      font-size: 1.6rem;
+      font-size: calculate-rem(16px);
       font-weight: 300;
     }
   }
@@ -67,12 +67,12 @@
     padding: 0 15px;
     &--head {
       font-weight: 700;
-      font-size: 2rem;
+      font-size: calculate-rem(20px);
     }
     &--sub {
       margin-left: 5px;
       font-weight: 400;
-      font-size: 1.6rem;
+      font-size: calculate-rem(16px);
     }
     .close {
       position: absolute;

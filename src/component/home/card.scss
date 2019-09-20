@@ -18,14 +18,14 @@
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: calculate-rem(16px);
     @include viewport(small) {
       margin: 15px 5px;
     }
     &--Text {
       text-align: center;
       margin: 5px;
-      font-size: 1.5rem;
+      font-size: calculate-rem(15px);
       @include viewport(small) {
         text-align: center;
         margin: 5px 0;

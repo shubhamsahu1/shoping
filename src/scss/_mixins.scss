@@ -56,3 +56,8 @@
     }
   }
 }
+
+@function calculate-rem($size) {
+  $rem-size: $size / 10px;
+  @return #{$rem-size}rem;
+}

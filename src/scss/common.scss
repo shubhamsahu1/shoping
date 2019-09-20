@@ -1,9 +1,9 @@
 .title {
   margin: 10px;
   &-primary {
-    font-size: 3rem;
+    font-size: calculate-rem(30px);
   }
   &-secondary {
-    font-size: 1.6rem;
+    font-size: calculate-rem(16px);
   }
 }

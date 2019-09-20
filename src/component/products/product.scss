@@ -24,10 +24,6 @@
         width: 50%;
         padding: 5px 5px;
       }
-      @include viewport(small) {
-        width: 50%;
-        padding: 5px 5px;
-      }
     }
     .productInfo {
       background-color: map-get($theme-colors, "background");

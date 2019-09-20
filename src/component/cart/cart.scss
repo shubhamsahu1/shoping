@@ -8,11 +8,6 @@
   right: 0;
   background-color: map-get($theme-colors, "background");
   z-index: 50;
-  @include viewport(small) {
-    width: 100%;
-    top: -80px;
-    height: 100vh;
-  }
   @include viewport(medium) {
     width: 100%;
     top: -80px;

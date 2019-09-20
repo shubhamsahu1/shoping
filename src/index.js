@@ -1,6 +1,8 @@
 import "react-app-polyfill/ie9";
 import "react-app-polyfill/stable";
 import React from "react";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
 import { ConnectedRouter } from "connected-react-router";
@@ -13,9 +15,9 @@ const target = document.querySelector("#root");
 render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <div>
+      <I18nextProvider i18n={i18n}>
         <App />
-      </div>
+      </I18nextProvider>
     </ConnectedRouter>
   </Provider>,
   target

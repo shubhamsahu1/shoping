@@ -1,6 +1,7 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 import { push } from "connected-react-router";
+import i18next from "i18next";
 import { connect } from "react-redux";
 import { inputField } from "./../common/input";
 const submit = (values, changePage) => {
@@ -10,37 +11,39 @@ const submit = (values, changePage) => {
 const validate = values => {
   const errors = {};
   if (!values.firstname) {
-    errors.firstname = "Required";
+    errors.firstname = i18next.t("Required");
   }
   if (!values.lastname) {
-    errors.lastname = "Required";
+    errors.lastname = i18next.t("Required");
   }
   if (!values.email) {
-    errors.email = "Required";
+    errors.email = i18next.t("Required");
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = "Invalid email address";
+    errors.email = i18next.t("Invalid email address");
   }
 
   if (!values.password) {
-    errors.password = "Required";
+    errors.password = i18next.t("Required");
   } else if (values.password.length < 6) {
-    errors.password = "Minimum length 6 characters";
+    errors.password = i18next.t("Minimum length 6 characters");
   } else if (
     !/^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$/i.test(values.password)
   ) {
-    errors.password = "Must have a number and alphabet";
+    errors.password = i18next.t("Must have a number and alphabet");
   }
 
   if (!values.confirmPassword) {
-    errors.confirmPassword = "Required";
+    errors.confirmPassword = i18next.t("Required");
   } else if (values.confirmPassword.length < 6) {
-    errors.confirmPassword = "Minimum length 6 characters";
+    errors.confirmPassword = i18next.t("Minimum length 6 characters");
   } else if (
     !/^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$/i.test(values.confirmPassword)
   ) {
-    errors.confirmPassword = "Must have a number and alphabet";
+    errors.confirmPassword = i18next.t("Must have a number and alphabet");
   } else if (values.confirmPassword !== values.password) {
-    errors.confirmPassword = "Confirm password needs to be same as password";
+    errors.confirmPassword = i18next.t(
+      "Confirm password needs to be same as password"
+    );
   }
   return errors;
 };
@@ -58,29 +61,34 @@ class Register extends React.Component {
           name="firstname"
           type="text"
           component={inputField}
-          label="Firstname"
+          label={i18next.t("FirstName")}
         />
         <Field
           name="lastname"
           type="text"
           component={inputField}
-          label="Lastname"
+          label={i18next.t("LastName")}
         />
-        <Field name="email" type="email" component={inputField} label="Email" />
+        <Field
+          name="email"
+          type="email"
+          component={inputField}
+          label={i18next.t("Email")}
+        />
         <Field
           name="password"
           type="password"
           component={inputField}
-          label="Password"
+          label={i18next.t("Password")}
         />
         <Field
           name="confirmPassword"
           type="password"
           component={inputField}
-          label="Confirm Password"
+          label={i18next.t("ConfirmPassword")}
         />
         <button className="register-form--submit" type="submit">
-          Submit
+          {i18next.t("Submit")}
         </button>
       </form>
     );

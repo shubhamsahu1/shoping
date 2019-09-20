@@ -2,10 +2,10 @@
   width: 100%;
   height: 80px;
   display: flex;
+  position: relative;
   @include viewport(small) {
     justify-content: space-between;
   }
-  z-index: 10;
   box-shadow: 0px 3px 10px #d0d0d0;
   a {
     &:link,
@@ -24,13 +24,22 @@
     align-items: center;
     background-color: map-get($theme-colors, "background");
     font-weight: 400;
+    @include viewport(small) {
+      font-size: calculate-rem(30px);
+    }
     img {
       width: 20px;
+      @include viewport(small) {
+        width: 30px;
+      }
     }
   }
   .right {
     display: flex;
     flex-direction: column;
+    @include viewport(small) {
+      display: none;
+    }
     .loginSection {
       font-size: calculate-rem(16px);
       margin: 3px 2px;
@@ -71,9 +80,56 @@
     }
   }
 
+  .openMenu {
+    padding: 20px;
+    display: none;
+    @include viewport(small) {
+      display: block;
+    }
+  }
+
   .logo {
     width: 200px;
     margin: 1px 5px;
     background-size: contain;
+  }
+  .hamburger {
+    display: none;
+    position: absolute;
+    background-color: map-get($theme-colors, "white");
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    @include viewport(small) {
+      &--show {
+        display: block;
+      }
+    }
+    &-row1 {
+      display: flex;
+      height: 80px;
+      &--close {
+        flex-grow: 2;
+        position: absolute;
+        right: 0;
+        padding: 20px;
+      }
+    }
+    &-row2 {
+      display: flex;
+      flex-direction: column;
+      &--link {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: 60px;
+        font-size: calculate-rem(30px);
+        &:nth-child(even) {
+          background-color: map-get($theme-colors, "background");
+        }
+      }
+    }
   }
 }

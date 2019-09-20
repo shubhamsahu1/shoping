@@ -44,7 +44,6 @@
       color: map-get($theme-colors, "white");
       -webkit-appearance: none;
       border: 0;
-      z-index: 10;
     }
   }
   @include viewport(small) {

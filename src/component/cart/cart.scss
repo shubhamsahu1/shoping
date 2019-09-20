@@ -74,32 +74,5 @@
       font-weight: 400;
       font-size: calculate-rem(16px);
     }
-    .close {
-      position: absolute;
-      right: 10px;
-      top: 16px;
-      width: 32px;
-      height: 32px;
-      opacity: 0.3;
-      cursor: pointer;
-      &:hover {
-        opacity: 1;
-      }
-      &:before,
-      &:after {
-        position: absolute;
-        left: 15px;
-        content: " ";
-        height: 25px;
-        width: 2px;
-        background-color: map-get($theme-colors, "white");
-      }
-      &:before {
-        transform: rotate(45deg);
-      }
-      &:after {
-        transform: rotate(-45deg);
-      }
-    }
   }
 }

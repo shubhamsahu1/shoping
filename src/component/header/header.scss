@@ -98,13 +98,21 @@
     position: absolute;
     background-color: map-get($theme-colors, "white");
     top: 0;
-    left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 1;
+    z-index: 16;
     @include viewport(small) {
       &--show {
         display: block;
+        animation: slide 0.5s;
+        @keyframes slide {
+          0% {
+            left: 100vw;
+          }
+          100% {
+            left: 0;
+          }
+        }
       }
     }
     &-row1 {

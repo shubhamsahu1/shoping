@@ -45,6 +45,7 @@ const Header = props => {
             className="cart-wraper"
             onClick={() => {
               props.toggleCart();
+              setHambergur(!hambergur);
             }}
           >
             <img src={"/static/images/cart.svg"} alt="cart"></img>

@@ -23,7 +23,6 @@ const validate = values => {
   return errors;
 };
 const submit = (values, changePage) => {
-  console.log(values);
   changePage("/");
 };
 class Login extends React.Component {

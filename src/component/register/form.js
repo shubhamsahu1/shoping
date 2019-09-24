@@ -6,7 +6,6 @@ import { connect } from "react-redux";
 import { inputField } from "./../common/input";
 import { passwordRegExp, emailRegExp } from "../../common";
 const submit = (values, changePage) => {
-  console.log(values);
   changePage("/");
 };
 const validate = values => {

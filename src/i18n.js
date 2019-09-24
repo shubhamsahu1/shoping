@@ -31,7 +31,16 @@ i18n.use(LanguageDetector).init({
         "Get access to your Order, Wishlist and Recommendations":
           "Get access to your Order, Wishlist and Recommendations",
         "We do not share your personal details with anyone":
-          "We do not share your personal details with anyone"
+          "We do not share your personal details with anyone",
+        "Copyright @ 2011-2019 Sabka Bazaar Grocery Supplies Pvt Ltd":
+          "Copyright @ 2011-2019 Sabka Bazaar Grocery Supplies Pvt Ltd",
+        "No Item in your cart": "No Item in your cart",
+        "your favourite items are just click away":
+          "your favourite items are just click away",
+        "Promo can be applied on payment page":
+          "Promo can be applied on payment page",
+        "Proceed to Checkout": "Proceed to Checkout",
+        "Start Shopping": "Start Shopping"
       }
     },
 

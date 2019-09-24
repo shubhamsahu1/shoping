@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Item from "./item";
 import { toggleCart, checkout } from "./../../reducers";
-//import classnames from "classnames";
+import i18next from "i18next";
 
 class Cart extends React.Component {
   state = {};
@@ -23,9 +23,11 @@ class Cart extends React.Component {
           </div>
         ) : (
           <div className="cart-noItem">
-            <div className="cart-noItem--header">No Item in your cart</div>
+            <div className="cart-noItem--header">
+              {i18next.t("No Item in your cart")}
+            </div>
             <div className="cart-noItem--sub">
-              your favourite items are just click away
+              {i18next.t("your favourite items are just click away")}
             </div>
           </div>
         )}
@@ -33,10 +35,10 @@ class Cart extends React.Component {
           {totalItem > 0 ? (
             <React.Fragment>
               <div className="cart-footer--promo">
-                Promo can be applied on payment page
+                {i18next.t("Promo can be applied on payment page")}
               </div>
               <div className="cart-footer-checkout" onClick={() => checkout()}>
-                <span>Proceed to Checkout</span>
+                <span>{i18next.t("Proceed to Checkout")}</span>
                 <span>Rs.{totalValue}</span>
               </div>
             </React.Fragment>
@@ -45,7 +47,7 @@ class Cart extends React.Component {
               className="cart-footer-checkout cart-footer--start"
               onClick={() => checkout()}
             >
-              <span>Start Shopping</span>
+              <span>{i18next.t("Start Shopping")}</span>
             </div>
           )}
         </div>

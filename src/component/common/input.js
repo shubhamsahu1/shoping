@@ -8,13 +8,13 @@ export const inputField = ({
   meta: { touched, error }
 }) => (
   <div className="inputWraper">
-    <label htmlFor={name} className="inp">
+    <label htmlFor={name} className="input">
       <input {...input} id={name} placeholder="&nbsp;" type={type} />
-      <span htmlFor={name} className="inp-label">
+      <span htmlFor={name} className="input-label">
         {label}
       </span>
-      <span className="inp-border"></span>
+      <span className="input-border"></span>
     </label>
-    {touched && error && <span className="inp--error">{error}</span>}
+    {touched && error && <span className="input--error">{error}</span>}
   </div>
 );

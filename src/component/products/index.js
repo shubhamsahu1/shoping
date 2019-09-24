@@ -40,6 +40,7 @@ class Products extends React.Component {
           onChange={e => {
             setfilter(e.target.value);
           }}
+          value={filter.filterID}
         >
           <option value="">Reset</option>
           {this.props.cardData

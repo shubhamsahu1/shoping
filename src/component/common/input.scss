@@ -3,7 +3,7 @@
 }
 .inputWraper {
   margin-bottom: 20px;
-  .inp {
+  .input {
     position: relative;
     &--error {
       font-weight: 600;
@@ -60,7 +60,7 @@
         + span {
           color: map-get($input-colors, "primary");
           transform: translateY(-26px) scale(0.75);
-          + .inp-border {
+          + .input-border {
             transform: scaleX(1);
           }
         }

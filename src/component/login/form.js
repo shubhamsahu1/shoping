@@ -67,7 +67,7 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => {
   return {
-    changePage: () => dispatch(push("/"))
+    changePage: url => dispatch(push(url))
   };
 };
 

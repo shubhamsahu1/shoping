@@ -4,13 +4,13 @@ import { push } from "connected-react-router";
 import i18next from "i18next";
 import { connect } from "react-redux";
 import { inputField } from "./../common/input";
-import { passwordRegExp } from "../../common";
+import { emailRegExp, passwordRegExp } from "../../common";
 const validate = values => {
   const errors = {};
-  if (!values.username) {
-    errors.username = i18next.t("Required");
-  } else if (values.username.length > 15) {
-    errors.username = i18next.t("Must be 15 characters or less");
+  if (!values.email) {
+    errors.email = i18next.t("Required");
+  } else if (!emailRegExp.test(values.email)) {
+    errors.email = i18next.t("Invalid email address");
   }
 
   if (!values.password) {
@@ -36,10 +36,10 @@ class Login extends React.Component {
         noValidate
       >
         <Field
-          name="username"
+          name="email"
           type="text"
           component={inputField}
-          label={i18next.t("Username")}
+          label={i18next.t("Email")}
         />
         <Field
           name="password"

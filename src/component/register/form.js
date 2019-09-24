@@ -4,6 +4,7 @@ import { push } from "connected-react-router";
 import i18next from "i18next";
 import { connect } from "react-redux";
 import { inputField } from "./../common/input";
+import { passwordRegExp, emailRegExp } from "../../common";
 const submit = (values, changePage) => {
   console.log(values);
   changePage("/");
@@ -18,7 +19,7 @@ const validate = values => {
   }
   if (!values.email) {
     errors.email = i18next.t("Required");
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+  } else if (!emailRegExp.test(values.email)) {
     errors.email = i18next.t("Invalid email address");
   }
 
@@ -26,20 +27,16 @@ const validate = values => {
     errors.password = i18next.t("Required");
   } else if (values.password.length < 6) {
     errors.password = i18next.t("Minimum length 6 characters");
-  } else if (
-    !/^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$/i.test(values.password)
-  ) {
-    errors.password = i18next.t("Must have a number and alphabet");
+  } else if (!passwordRegExp.test(values.password)) {
+    errors.password = i18next.t("Must have a number and alphabet only");
   }
 
   if (!values.confirmPassword) {
     errors.confirmPassword = i18next.t("Required");
   } else if (values.confirmPassword.length < 6) {
     errors.confirmPassword = i18next.t("Minimum length 6 characters");
-  } else if (
-    !/^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$/i.test(values.confirmPassword)
-  ) {
-    errors.confirmPassword = i18next.t("Must have a number and alphabet");
+  } else if (!passwordRegExp.test(values.confirmPassword)) {
+    errors.confirmPassword = i18next.t("Must have a number and alphabet only");
   } else if (values.confirmPassword !== values.password) {
     errors.confirmPassword = i18next.t(
       "Confirm password needs to be same as password"

@@ -23,7 +23,9 @@ i18n.use(LanguageDetector).init({
         ConfirmPassword: "ConfirmPassword",
         "Invalid email address": "Invalid email address",
         "Minimum length 6 characters": "Minimum length 6 characters",
-        "Must have a number and alphabet": "Must have a number and alphabet",
+        "Must be 15 characters or less": "Must be 15 characters or less",
+        "Must have a number and alphabet only":
+          "Must have a number and alphabet only",
         "Confirm password needs to be same as password":
           "Confirm password needs to be same as password",
         "Get access to your Order, Wishlist and Recommendations":

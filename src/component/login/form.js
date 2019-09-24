@@ -4,22 +4,21 @@ import { push } from "connected-react-router";
 import i18next from "i18next";
 import { connect } from "react-redux";
 import { inputField } from "./../common/input";
+import { passwordRegExp } from "../../common";
 const validate = values => {
   const errors = {};
   if (!values.username) {
     errors.username = i18next.t("Required");
   } else if (values.username.length > 15) {
-    errors.username = "Must be 15 characters or less";
+    errors.username = i18next.t("Must be 15 characters or less");
   }
 
   if (!values.password) {
     errors.password = i18next.t("Required");
   } else if (values.password.length < 6) {
     errors.password = i18next.t("Minimum length 6 characters");
-  } else if (
-    !/^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$/i.test(values.password)
-  ) {
-    errors.password = i18next.t("Must have a number and alphabet");
+  } else if (!passwordRegExp.test(values.password)) {
+    errors.password = i18next.t("Must have a number and alphabet only");
   }
   return errors;
 };

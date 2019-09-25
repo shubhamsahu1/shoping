@@ -34,17 +34,15 @@ class Offer extends React.Component {
                 key={val}
                 className={classnames({
                   "content-show": this.state.slideIndex === val,
-                  animateFading: 1,
                   "content-img": 1
                 })}
                 alt={`offer${val}`}
                 src={`/static/images/offers/offer${val}.jpg`}
-                style={{ width: "100%" }}
               />
             );
           })}
 
-          <div className="nav" style={{ width: "100%" }}>
+          <div className="nav">
             <div className="nav--arrow left" onClick={() => this.plusDivs(-1)}>
               PREV
             </div>
@@ -52,7 +50,7 @@ class Offer extends React.Component {
               NEXT
             </div>
           </div>
-          <div className="nav nav-badge" style={{ width: "100%" }}>
+          <div className="nav nav-badge">
             {[1, 2, 3, 4, 5].map((val, i) => {
               return (
                 <span

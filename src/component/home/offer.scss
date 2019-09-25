@@ -8,6 +8,7 @@
   &-img {
     display: none;
     animation: fading 3s;
+    width: 100%;
   }
   &-show {
     display: block;
@@ -30,8 +31,11 @@
   position: absolute;
   left: 50%;
   bottom: 50%;
+  width: 100%;
   transform: translate(-50%, 100%);
   font-size: calculate-rem(14px);
+  display: flex;
+  justify-content: space-between;
   &--arrow {
     cursor: pointer;
     color: map-get($theme-colors, "white");
@@ -39,12 +43,7 @@
     background-color: map-get($theme-colors, "black");
     opacity: 0.1;
     transition: opacity 0.2s;
-    &.left {
-      float: left;
-    }
-    &.right {
-      float: right;
-    }
+
     &:hover {
       opacity: 0.5;
     }
@@ -59,6 +58,7 @@
   }
   &-badge {
     bottom: 5%;
+    display: inline;
   }
   &--badge {
     background-color: rgba(0, 0, 0, 0.2);

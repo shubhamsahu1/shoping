@@ -14,6 +14,7 @@
       padding: 10px 20px;
       font-size: calculate-rem(16px);
       border-bottom: 2px solid map-get($theme-colors, "border");
+      cursor: pointer;
       &:hover {
         background-color: map-get($theme-colors, "background-hover");
       }

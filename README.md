@@ -12,3 +12,15 @@ npm run startDb
 npm start
 
 ```
+
+## Technology
+
+```
+1. React and redux as JS framework.
+2. added pre-commit hooks with 'husky' .
+3. used pre-commit hooks like lint-staged and prettier.
+4. Test this React application with the axe-core accessibility testing library.
+5. used i18next for internationalization of this application.
+6. used react-app-polyfill to run this app on older browser.
+
+```

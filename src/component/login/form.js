@@ -46,7 +46,7 @@ class Login extends React.Component {
           type="password"
           component={inputField}
           label={i18next.t("Password")}
-          helpText="Password must have a number and alphabet only"
+          helpText={i18next.t("Password must have a number and alphabet only")}
         />
         <button className="login-form--submit" type="submit">
           {i18next.t("Submit")}

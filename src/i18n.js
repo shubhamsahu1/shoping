@@ -21,6 +21,8 @@ i18n.use(LanguageDetector).init({
         FirstName: "FirstName",
         LastName: "LastName",
         ConfirmPassword: "ConfirmPassword",
+        "Password must have a number and alphabet only":
+          "Password must have a number and alphabet only",
         "Invalid email address": "Invalid email address",
         "Minimum length 6 characters": "Minimum length 6 characters",
         "Must be 15 characters or less": "Must be 15 characters or less",

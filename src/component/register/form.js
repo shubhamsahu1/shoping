@@ -82,7 +82,7 @@ class Register extends React.Component {
           type="password"
           component={inputField}
           label={i18next.t("ConfirmPassword")}
-          helpText="Password must have a number and alphabet only"
+          helpText={i18next.t("Password must have a number and alphabet only")}
         />
         <button className="register-form--submit" type="submit">
           {i18next.t("Submit")}

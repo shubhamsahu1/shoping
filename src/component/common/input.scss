@@ -10,6 +10,10 @@
       color: map-get($theme-colors, "error");
       font-size: calculate-rem(14px);
     }
+    &--helptext {
+      font-size: calculate-rem(14px);
+      display: block;
+    }
     &-label {
       position: absolute;
       top: 5px;

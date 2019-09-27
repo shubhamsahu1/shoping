@@ -42,7 +42,7 @@ class Products extends React.Component {
           }}
           value={filter.filterID}
         >
-          <option value="">Reset</option>
+          <option value="">Please select</option>
           {this.props.cardData
             .filter(data => data.enabled)
             .map(data => (

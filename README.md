@@ -27,4 +27,4 @@ npm start
 ## Performance
 
 
-![alt text](http://public/static/performance.PNG)
+![alt text](https://github.com/shubhamsahu1/shoping/blob/master/public/static/performance.PNG)

@@ -26,6 +26,5 @@ npm start
 ```
 ## Performance
 
-```
+
 ![alt text](http://public/static/performance.PNG)
-```

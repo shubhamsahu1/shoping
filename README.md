@@ -24,3 +24,8 @@ npm start
 6. used react-app-polyfill to run this app on older browser.
 
 ```
+## Performance
+
+```
+![alt text](http://public/static/performance.PNG)
+```

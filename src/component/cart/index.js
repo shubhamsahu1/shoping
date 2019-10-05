@@ -41,8 +41,8 @@ class Cart extends React.Component {
                 className="cart-footer-checkout"
                 onClick={() => checkout()}
               >
-                <span>{i18next.t("Proceed to Checkout")}</span>
-                <span>Rs.{totalValue}</span>
+                <p>{i18next.t("Proceed to Checkout")}</p>
+                <p>Rs.{totalValue}</p>
               </button>
             </React.Fragment>
           ) : (

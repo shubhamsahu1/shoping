@@ -24,6 +24,7 @@
     }
     &-checkout {
       margin: 5px;
+      width: 97%;
       background-color: map-get($theme-colors, "primary");
       color: map-get($theme-colors, "white");
       padding: 10px;
@@ -34,6 +35,7 @@
     }
     &--start {
       justify-content: center;
+      width: 100%;
     }
   }
   &-items {

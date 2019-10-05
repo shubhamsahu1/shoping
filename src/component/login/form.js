@@ -37,7 +37,7 @@ class Login extends React.Component {
       >
         <Field
           name="email"
-          type="text"
+          type="email"
           component={inputField}
           label={i18next.t("Email")}
         />

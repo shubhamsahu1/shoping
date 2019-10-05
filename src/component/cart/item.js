@@ -9,7 +9,7 @@ class Item extends React.Component {
   render() {
     const { cart, addToCart, removeFromCart } = this.props;
     return (
-      <div className="itemWraper">
+      <article className="itemWraper">
         {cart.cartData.map((data, i) => (
           <div key={i} className="item">
             <img
@@ -18,36 +18,40 @@ class Item extends React.Component {
               alt={data.item.description}
             ></img>
             <div className="item-info">
-              <div className="item-info--heading">{data.item.name}</div>
+              <h4 className="item-info--heading">{data.item.name}</h4>
               <div className="item-info-qty">
-                <img
-                  src="/static/remove.png"
-                  className="item-info-qty--icon"
-                  alt="remove item"
-                  onClick={() => removeFromCart(data.item.id)}
-                ></img>
+                <button>
+                  <img
+                    src="/static/remove.png"
+                    className="item-info-qty--icon"
+                    alt="remove item"
+                    onClick={() => removeFromCart(data.item.id)}
+                  />
+                </button>
 
                 <span>{data.qty}</span>
-                <img
-                  src="/static/add.png"
-                  className="item-info-qty--icon"
-                  alt="add one more item"
-                  onClick={() => addToCart(data.item.id)}
-                ></img>
+                <button>
+                  <img
+                    src="/static/add.png"
+                    className="item-info-qty--icon"
+                    alt="add one more item"
+                    onClick={() => addToCart(data.item.id)}
+                  />
+                </button>
                 <img src="/static/close.png" alt="close Cart"></img>
-                <span>Rs. {data.item.price}</span>
-                <span className="item-total">
+                <p>Rs. {data.item.price}</p>
+                <strong className="item-total">
                   Rs. {data.item.price * data.qty}
-                </span>
+                </strong>
               </div>
             </div>
           </div>
         ))}
         <div className="itemWraper-lowest">
           <img src="static/images/lowest-price.png" alt="lowest-price"></img>
-          <span>You won't find cheaper anywhere</span>
+          <p>You won't find cheaper anywhere</p>
         </div>
-      </div>
+      </article>
     );
   }
 }

@@ -9,19 +9,19 @@ class Product extends React.Component {
   render() {
     const { name, imageURL, description, price, addToCart, id } = this.props;
     return (
-      <div className="productWraper">
+      <article className="productWraper">
         <h4 className="heading">
           <strong>{name}</strong>
         </h4>
 
         <div className="productImgInfo destopTab">
           <img className="productImg" src={imageURL} alt={name}></img>
-          <div className="productInfo">{description + " image"}</div>
+          <p className="productInfo">{description}</p>
         </div>
         <div className="productImgInfo mobile">
           <img className="productImg" src={imageURL} alt={name}></img>
           <div className="productInfoPrice">
-            <div className="productInfo">{description + " image"}</div>
+            <p className="productInfo">{description}</p>
             <div className="priceWrap">
               <button className="buyNow" onClick={() => addToCart(id)}>
                 Buy Now @ Rs.{price}
@@ -40,7 +40,7 @@ class Product extends React.Component {
             Buy Now @ Rs.{price}
           </button>
         </div>
-      </div>
+      </article>
     );
   }
 }

@@ -10,48 +10,51 @@ class Cart extends React.Component {
   render() {
     const { toggleCart, totalItem, totalValue, checkout } = this.props;
     return (
-      <div className="cart">
-        <div className="cart-myCart">
-          <span className="cart-myCart--head">
+      <aside className="cart">
+        <section className="cart-myCart">
+          <h3 className="cart-myCart--head">
             My Cart<span className="cart-myCart--sub">( {totalItem} item)</span>
-          </span>
+          </h3>
           <span className="close" onClick={() => toggleCart()}></span>
-        </div>
+        </section>
         {totalItem > 0 ? (
           <div className="cart-items">
             <Item />
           </div>
         ) : (
-          <div className="cart-noItem">
-            <div className="cart-noItem--header">
+          <section className="cart-noItem">
+            <h4 className="cart-noItem--header">
               {i18next.t("No Item in your cart")}
-            </div>
-            <div className="cart-noItem--sub">
+            </h4>
+            <p className="cart-noItem--sub">
               {i18next.t("your favourite items are just click away")}
-            </div>
-          </div>
+            </p>
+          </section>
         )}
         <div className="cart-footer">
           {totalItem > 0 ? (
             <React.Fragment>
-              <div className="cart-footer--promo">
+              <p className="cart-footer--promo">
                 {i18next.t("Promo can be applied on payment page")}
-              </div>
-              <div className="cart-footer-checkout" onClick={() => checkout()}>
+              </p>
+              <button
+                className="cart-footer-checkout"
+                onClick={() => checkout()}
+              >
                 <span>{i18next.t("Proceed to Checkout")}</span>
                 <span>Rs.{totalValue}</span>
-              </div>
+              </button>
             </React.Fragment>
           ) : (
-            <div
+            <button
               className="cart-footer-checkout cart-footer--start"
               onClick={() => checkout()}
             >
-              <span>{i18next.t("Start Shopping")}</span>
-            </div>
+              {i18next.t("Start Shopping")}
+            </button>
           )}
         </div>
-      </div>
+      </aside>
     );
   }
 }

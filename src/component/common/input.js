@@ -17,8 +17,6 @@ export const inputField = ({
       <span className="input-border"></span>
     </label>
     {touched && error && <span className="input--error">{error}</span>}
-    {helpText && !touched && (
-      <span className="input--helptext">{helpText}</span>
-    )}
+    {helpText && !touched && <p className="input--helptext">{helpText}</p>}
   </div>
 );

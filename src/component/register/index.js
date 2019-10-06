@@ -6,9 +6,9 @@ export default () => (
   <section className="register">
     <div className="register-info">
       <h2 className="title title-primary">{i18next.t("SignUp")}</h2>
-      <span className="title title-secondary">
+      <p className="title title-secondary">
         {i18next.t("We do not share your personal details with anyone")}
-      </span>
+      </p>
     </div>
     <div className="register-form">
       <Register />

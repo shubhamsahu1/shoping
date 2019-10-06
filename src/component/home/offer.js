@@ -26,44 +26,42 @@ class Offer extends React.Component {
   }
   render() {
     return (
-      <section>
-        <div className="content">
+      <section className="content">
+        {[1, 2, 3, 4, 5].map((val, i) => {
+          return (
+            <img
+              key={val}
+              className={classnames({
+                "content-show": this.state.slideIndex === val,
+                "content-img": 1
+              })}
+              alt={`offer${val}`}
+              src={`/static/images/offers/offer${val}.jpg`}
+            />
+          );
+        })}
+
+        <div className="nav">
+          <div className="nav--arrow left" onClick={() => this.plusDivs(-1)}>
+            PREV
+          </div>
+          <div className="nav--arrow right" onClick={() => this.plusDivs(1)}>
+            NEXT
+          </div>
+        </div>
+        <div className="nav nav-badge">
           {[1, 2, 3, 4, 5].map((val, i) => {
             return (
-              <img
-                key={val}
+              <span
                 className={classnames({
-                  "content-show": this.state.slideIndex === val,
-                  "content-img": 1
+                  "nav--badge--selected": this.state.slideIndex === val,
+                  "nav--badge": 1
                 })}
-                alt={`offer${val}`}
-                src={`/static/images/offers/offer${val}.jpg`}
-              />
+                key={val}
+                onClick={() => this.currentDiv(val)}
+              ></span>
             );
           })}
-
-          <div className="nav">
-            <div className="nav--arrow left" onClick={() => this.plusDivs(-1)}>
-              PREV
-            </div>
-            <div className="nav--arrow right" onClick={() => this.plusDivs(1)}>
-              NEXT
-            </div>
-          </div>
-          <div className="nav nav-badge">
-            {[1, 2, 3, 4, 5].map((val, i) => {
-              return (
-                <span
-                  className={classnames({
-                    "nav--badge--selected": this.state.slideIndex === val,
-                    "nav--badge": 1
-                  })}
-                  key={val}
-                  onClick={() => this.currentDiv(val)}
-                ></span>
-              );
-            })}
-          </div>
         </div>
       </section>
     );

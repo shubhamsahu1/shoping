@@ -10,7 +10,13 @@ export const inputField = ({
 }) => (
   <div className="inputWraper">
     <label htmlFor={name} className="input">
-      <input {...input} id={name} placeholder="&nbsp;" type={type} />
+      <input
+        {...input}
+        id={name}
+        placeholder="&nbsp;"
+        type={type}
+        aria-label={"please type your " + label}
+      />
       <span htmlFor={name} className="input-label">
         {label}
       </span>

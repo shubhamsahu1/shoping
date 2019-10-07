@@ -48,7 +48,11 @@ class Login extends React.Component {
           label={i18next.t("Password")}
           helpText={i18next.t("Password must have a number and alphabet only")}
         />
-        <button className="login-form--submit" type="submit">
+        <button
+          className="login-form--submit"
+          type="submit"
+          aria-label="Press Enter to Submit"
+        >
           {i18next.t("Submit")}
         </button>
       </form>

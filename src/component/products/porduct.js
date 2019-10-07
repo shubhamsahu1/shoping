@@ -31,7 +31,11 @@ class Product extends React.Component {
         </div>
         <div className="priceWrap destop">
           <span className="productMrp">MRP Rs.{price}</span>
-          <button className="buyNow" onClick={() => addToCart(id)}>
+          <button
+            aria-label={`Buy ${name} @ Rs.${price}, press enter`}
+            className="buyNow"
+            onClick={() => addToCart(id)}
+          >
             Buy Now
           </button>
         </div>

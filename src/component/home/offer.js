@@ -41,14 +41,14 @@ class Offer extends React.Component {
           );
         })}
 
-        <div className="nav">
-          <div className="nav--arrow left" onClick={() => this.plusDivs(-1)}>
+        <nav className="nav">
+          <button className="nav--arrow left" onClick={() => this.plusDivs(-1)}>
             PREV
-          </div>
-          <div className="nav--arrow right" onClick={() => this.plusDivs(1)}>
+          </button>
+          <button className="nav--arrow right" onClick={() => this.plusDivs(1)}>
             NEXT
-          </div>
-        </div>
+          </button>
+        </nav>
         <div className="nav nav-badge">
           {[1, 2, 3, 4, 5].map((val, i) => {
             return (

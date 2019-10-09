@@ -35,3 +35,14 @@
     transform: rotate(-45deg);
   }
 }
+.icon {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  &--remove {
+    background-image: url(/static/remove.png);
+  }
+  &--add {
+    background-image: url(/static/add.png);
+  }
+}

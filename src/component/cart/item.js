@@ -20,24 +20,16 @@ class Item extends React.Component {
             <div className="item-info">
               <h4 className="item-info--heading">{data.item.name}</h4>
               <div className="item-info-qty">
-                <button>
-                  <img
-                    src="/static/remove.png"
-                    className="item-info-qty--icon"
-                    alt="remove item"
-                    onClick={() => removeFromCart(data.item.id)}
-                  />
-                </button>
+                <button
+                  className="item-info-qty--icon icon icon--remove"
+                  onClick={() => removeFromCart(data.item.id)}
+                ></button>
 
                 <span>{data.qty}</span>
-                <button>
-                  <img
-                    src="/static/add.png"
-                    className="item-info-qty--icon"
-                    alt="add one more item"
-                    onClick={() => addToCart(data.item.id)}
-                  />
-                </button>
+                <button
+                  className="item-info-qty--icon icon icon--add"
+                  onClick={() => addToCart(data.item.id)}
+                ></button>
                 <img src="/static/close.png" alt="close Cart"></img>
                 <p>Rs. {data.item.price}</p>
                 <strong className="item-total">

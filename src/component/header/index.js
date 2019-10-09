@@ -30,11 +30,15 @@ const Header = props => {
           <Link to="/login">{i18next.t("SignIn")}</Link>
           <Link to="/register">{i18next.t("Register")}</Link>
         </div>
-        <button className="cart-wraper" onClick={() => props.toggleCart()}>
+        <button
+          aria-label={`total items in cart is ${props.totalItem}`}
+          className="cart-wraper"
+          onClick={() => props.toggleCart()}
+        >
           <img src={"/static/images/cart.svg"} alt="cart"></img>
-          <span>
+          <p>
             {props.totalItem} {i18next.t("items")}
-          </span>
+          </p>
         </button>
       </div>
       <div

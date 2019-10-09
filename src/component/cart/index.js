@@ -10,12 +10,17 @@ class Cart extends React.Component {
   render() {
     const { toggleCart, totalItem, totalValue, checkout } = this.props;
     return (
-      <aside className="cart">
+      <div className="cart">
         <section className="cart-myCart">
           <h3 className="cart-myCart--head">
             My Cart<span className="cart-myCart--sub">( {totalItem} item)</span>
           </h3>
-          <span className="close" onClick={() => toggleCart()}></span>
+          <button
+            className="close"
+            aria-label="close cart"
+            autoFocus
+            onClick={() => toggleCart()}
+          ></button>
         </section>
         {totalItem > 0 ? (
           <div className="cart-items">
@@ -54,7 +59,7 @@ class Cart extends React.Component {
             </button>
           )}
         </div>
-      </aside>
+      </div>
     );
   }
 }

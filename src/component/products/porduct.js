@@ -10,9 +10,7 @@ class Product extends React.Component {
     const { name, imageURL, description, price, addToCart, id } = this.props;
     return (
       <article className="productWraper">
-        <h4 className="heading">
-          <strong>{name}</strong>
-        </h4>
+        <h4>{name}</h4>
 
         <div className="productImgInfo destopTab">
           <img className="productImg" src={imageURL} alt={name}></img>
@@ -30,7 +28,7 @@ class Product extends React.Component {
           </div>
         </div>
         <div className="priceWrap destop">
-          <span className="productMrp">MRP Rs.{price}</span>
+          <p className="productMrp">MRP Rs.{price}</p>
           <button
             aria-label={`Buy ${name} @ Rs.${price}, press enter`}
             className="buyNow"

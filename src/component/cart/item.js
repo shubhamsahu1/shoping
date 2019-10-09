@@ -25,7 +25,7 @@ class Item extends React.Component {
                   onClick={() => removeFromCart(data.item.id)}
                 ></button>
 
-                <span>{data.qty}</span>
+                <p>{data.qty}</p>
                 <button
                   className="item-info-qty--icon icon icon--add"
                   onClick={() => addToCart(data.item.id)}

@@ -2,7 +2,4 @@
   font-size: calculate-rem(16px);
   text-align: center;
   background-color: map-get($theme-colors, "background");
-  @include viewport(small) {
-    font-size: calculate-rem(14px);
-  }
 }

@@ -1,24 +1,23 @@
-.Card {
-  &--Img {
-    @include viewport(small) {
+@include viewport(small) {
+  .Card {
+    &--Img {
       height: 100%;
     }
-  }
-  &-info {
-    @include viewport(small) {
+    &-info {
       margin: 15px 5px;
-    }
-    &--Text {
-      @include viewport(small) {
+
+      &--Text {
         text-align: center;
         margin: 5px 0;
       }
     }
   }
+  .footer {
+    font-size: calculate-rem(14px);
+  }
 }
-
-.signIn {
-  @include viewport(medium) {
+@include viewport(medium) {
+  .signIn {
     flex-direction: column;
     align-items: stretch;
     margin: auto;

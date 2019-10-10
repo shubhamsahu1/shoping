@@ -32,7 +32,7 @@ const Header = props => {
         </div>
         <button
           aria-label={`total items in cart is ${props.totalItem}`}
-          className="header-cart-button"
+          className="header-cart--button"
           onClick={() => props.toggleCart()}
         >
           <img src={"/static/images/cart.svg"} alt="cart"></img>
@@ -42,11 +42,14 @@ const Header = props => {
         </button>
       </div>
       <div
-        className={classnames({ hamburger: 1, "hamburger--show": hambergur })}
+        className={classnames({
+          "header-hamburger": 1,
+          "header-hamburger--show": hambergur
+        })}
       >
-        <div className="hamburger-row1">
+        <div className="header-hamburger-row1">
           <button
-            className="header-cart-button"
+            className="header-cart--button"
             onClick={() => {
               props.toggleCart();
               setHambergur(!hambergur);
@@ -57,7 +60,7 @@ const Header = props => {
               {props.totalItem} {i18next.t("items")}
             </span>
           </button>
-          <div className="hamburger-row1--close">
+          <div className="header-hamburger-row1--close">
             <img
               src="/static/baseline_close_black_18dp.png"
               alt="close hamburger"
@@ -66,19 +69,19 @@ const Header = props => {
           </div>
         </div>
         <div
-          className="hamburger-row2"
+          className="header-hamburger-row2"
           onClick={() => setHambergur(!hambergur)}
         >
-          <Link className="hamburger-row2--link" to="/">
+          <Link className="header-hamburger-row2--link" to="/">
             {i18next.t("Home")}
           </Link>
-          <Link className="hamburger-row2--link" to="/product">
+          <Link className="header-hamburger-row2--link" to="/product">
             {i18next.t("Product")}
           </Link>
-          <Link className="hamburger-row2--link" to="/login">
+          <Link className="header-hamburger-row2--link" to="/login">
             {i18next.t("SignIn")}
           </Link>
-          <Link className="hamburger-row2--link" to="/register">
+          <Link className="header-hamburger-row2--link" to="/register">
             {i18next.t("Register")}
           </Link>
         </div>

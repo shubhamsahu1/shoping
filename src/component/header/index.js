@@ -9,7 +9,7 @@ import { toggleCart } from "./../../reducers";
 const Header = props => {
   const [hambergur, setHambergur] = useState(false);
   return (
-    <header className="wraper">
+    <header className="header">
       <img
         src={"/static/images/logo.png"}
         className="logo"
@@ -21,18 +21,18 @@ const Header = props => {
         alt="Open Menu"
         onClick={() => setHambergur(!hambergur)}
       ></img>
-      <div className="center">
+      <div className="header-center">
         <Link to="/">{i18next.t("Home")}</Link>
         <Link to="/product">{i18next.t("Product")}</Link>
       </div>
-      <div className="right">
-        <div className="loginSection">
+      <div className="header-right">
+        <div className="header-right-login">
           <Link to="/login">{i18next.t("SignIn")}</Link>
           <Link to="/register">{i18next.t("Register")}</Link>
         </div>
         <button
           aria-label={`total items in cart is ${props.totalItem}`}
-          className="cart-wraper"
+          className="header-cart-button"
           onClick={() => props.toggleCart()}
         >
           <img src={"/static/images/cart.svg"} alt="cart"></img>
@@ -46,7 +46,7 @@ const Header = props => {
       >
         <div className="hamburger-row1">
           <button
-            className="cart-wraper"
+            className="header-cart-button"
             onClick={() => {
               props.toggleCart();
               setHambergur(!hambergur);

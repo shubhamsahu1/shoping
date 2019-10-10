@@ -1,4 +1,4 @@
-.wraper {
+.header {
   width: 100%;
   height: 80px;
   display: flex;
@@ -15,7 +15,7 @@
     }
   }
 
-  .cart-wraper {
+  &-cart-button {
     display: flex;
     position: relative;
     font-size: calculate-rem(18px);
@@ -35,13 +35,13 @@
       }
     }
   }
-  .right {
+  &-right {
     display: flex;
     flex-direction: column;
     @include viewport(small) {
       display: none;
     }
-    .loginSection {
+    &-login {
       font-size: calculate-rem(16px);
       margin: 3px 2px;
       a {
@@ -51,7 +51,7 @@
       }
     }
   }
-  .center {
+  &-center {
     flex-grow: 2;
     display: flex;
     font-size: calculate-rem(18px);

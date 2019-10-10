@@ -1,0 +1,26 @@
+.Card {
+  &--Img {
+    @include viewport(small) {
+      height: 100%;
+    }
+  }
+  &-info {
+    @include viewport(small) {
+      margin: 15px 5px;
+    }
+    &--Text {
+      @include viewport(small) {
+        text-align: center;
+        margin: 5px 0;
+      }
+    }
+  }
+}
+
+.signIn {
+  @include viewport(medium) {
+    flex-direction: column;
+    align-items: stretch;
+    margin: auto;
+  }
+}

@@ -6,9 +6,6 @@
   &--Img {
     width: 33%;
     margin: 0 5%;
-    @include viewport(small) {
-      height: 100%;
-    }
   }
   &-info {
     margin: 15px;
@@ -19,17 +16,11 @@
     align-items: center;
     text-align: center;
     font-size: calculate-rem(16px);
-    @include viewport(small) {
-      margin: 15px 5px;
-    }
+
     &--Text {
       text-align: center;
       margin: 5px;
       font-size: calculate-rem(15px);
-      @include viewport(small) {
-        text-align: center;
-        margin: 5px 0;
-      }
     }
     &--btn {
       padding: 5px 10px;

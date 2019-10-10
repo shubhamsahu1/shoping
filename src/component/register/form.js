@@ -84,7 +84,11 @@ class Register extends React.Component {
           label={i18next.t("ConfirmPassword")}
           helpText={i18next.t("Password must have a number and alphabet only")}
         />
-        <button className="register-form--submit" type="submit">
+        <button
+          className="register-form--submit"
+          aria-label="Press Enter to Submit"
+          type="submit"
+        >
           {i18next.t("Submit")}
         </button>
       </form>

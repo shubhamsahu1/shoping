@@ -3,7 +3,7 @@ import i18next from "i18next";
 import Register from "./form";
 
 export default () => (
-  <section className="register">
+  <section className="register signIn">
     <div className="register-info">
       <h2 className="title title-primary">{i18next.t("SignUp")}</h2>
       <p className="title title-secondary">

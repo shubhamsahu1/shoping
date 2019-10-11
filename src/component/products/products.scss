@@ -22,10 +22,6 @@
         background-color: map-get($theme-colors, "background-hover");
       }
     }
-
-    @include viewport(small) {
-      display: none;
-    }
   }
   .produtsBody {
     flex: 1;
@@ -34,23 +30,5 @@
   }
   .productDrop {
     display: none;
-    @include viewport(small) {
-      display: block;
-      height: 40px;
-      padding: 0 25px;
-      background-color: map-get($theme-colors, "primary");
-      background: map-get($theme-colors, "primary") url(/static/down_black.png)
-        no-repeat right 0.75rem center;
-      background-size: 30px;
-      color: map-get($theme-colors, "white");
-      -webkit-appearance: none;
-      border: 0;
-    }
-  }
-  @include viewport(small) {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
   }
 }

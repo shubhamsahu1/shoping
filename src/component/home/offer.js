@@ -42,10 +42,10 @@ class Offer extends React.Component {
         })}
 
         <nav className="nav">
-          <button className="nav--arrow left" onClick={() => this.plusDivs(-1)}>
+          <button className="nav--arrow" onClick={() => this.plusDivs(-1)}>
             PREV
           </button>
-          <button className="nav--arrow right" onClick={() => this.plusDivs(1)}>
+          <button className="nav--arrow" onClick={() => this.plusDivs(1)}>
             NEXT
           </button>
         </nav>

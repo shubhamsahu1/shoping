@@ -47,14 +47,6 @@
     &:hover {
       opacity: 0.5;
     }
-    /*---------------------------------------------*/
-    /*-------------- offer section-----------------*/
-    /*-------------less than 480px-----------------*/
-
-    @include viewport(small) {
-      padding: 5px 5px;
-      font-size: calculate-rem(16px);
-    }
   }
   &-badge {
     bottom: 5%;

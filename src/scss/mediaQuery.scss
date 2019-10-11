@@ -75,6 +75,15 @@
       }
     }
   }
+  /*---------------------------------------------*/
+  /*-------------- offer section-----------------*/
+  /*-------------less than 480px-----------------*/
+  .nav {
+    &--arrow {
+      padding: 5px 5px;
+      font-size: calculate-rem(16px);
+    }
+  }
 }
 @include viewport(medium) {
   .signIn {

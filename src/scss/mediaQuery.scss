@@ -23,6 +23,9 @@
     &-right {
       display: none;
     }
+    &-center {
+      display: none;
+    }
     &--openMenu {
       display: block;
     }
@@ -88,6 +91,11 @@
     &-cart--button {
       img {
         width: 30px;
+      }
+    }
+    &-center {
+      a {
+        margin: 10px 5px;
       }
     }
   }

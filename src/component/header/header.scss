@@ -46,17 +46,11 @@
     flex-grow: 2;
     display: flex;
     font-size: calculate-rem(18px);
-    @include viewport(small) {
-      display: none;
-    }
     align-items: center;
     a {
       padding: 5px;
       margin: 10px 20px;
       cursor: pointer;
-      @include viewport(medium) {
-        margin: 10px 5px;
-      }
       &:visited,
       &:link {
         color: map-get($theme-colors, "black");

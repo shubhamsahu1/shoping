@@ -23,12 +23,14 @@ class Item extends React.Component {
                 <button
                   className="item-info-qty--icon icon icon--remove"
                   onClick={() => removeFromCart(data.item.id)}
+                  aria-label={"remove one quantity"}
                 ></button>
 
                 <p>{data.qty}</p>
                 <button
                   className="item-info-qty--icon icon icon--add"
                   onClick={() => addToCart(data.item.id)}
+                  aria-label={"add one quantity"}
                 ></button>
                 <img src="/static/close.png" alt="close Cart"></img>
                 <p>Rs. {data.item.price}</p>

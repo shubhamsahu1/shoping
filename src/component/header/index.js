@@ -17,7 +17,7 @@ const Header = props => {
       ></img>
       <img
         src={"/static/menu.png"}
-        className="openMenu"
+        className="header--openMenu"
         alt="Open Menu"
         onClick={() => setHambergur(!hambergur)}
       ></img>

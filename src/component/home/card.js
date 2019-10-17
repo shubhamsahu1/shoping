@@ -11,13 +11,13 @@ const btnClick = props => {
 const Card = props => (
   <section className={classnames({ Card: 1, "Card--revs": props.rowRev })}>
     <img className="Card--Img" src={props.url} alt={props.info}></img>
-    <div className="Card-info">
+    <article className="Card-info">
       <h4>{props.heading}</h4>
       <p className="Card-info--Text">{props.info}</p>
       <button className="Card-info--btn" onClick={() => btnClick(props)}>
         {props.btnLable}
       </button>
-    </div>
+    </article>
   </section>
 );
 

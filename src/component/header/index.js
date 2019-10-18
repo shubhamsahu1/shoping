@@ -21,11 +21,12 @@ const Header = props => {
         alt="Open Menu"
         onClick={() => setHambergur(!hambergur)}
       ></img>
-      <div className="header-center">
+
+      <nav className="header-center">
         <Link to="/">{i18next.t("Home")}</Link>
         <Link to="/product">{i18next.t("Product")}</Link>
-      </div>
-      <div className="header-right">
+      </nav>
+      <nav className="header-right">
         <div className="header-right-login">
           <Link to="/login">{i18next.t("SignIn")}</Link>
           <Link to="/register">{i18next.t("Register")}</Link>
@@ -40,7 +41,7 @@ const Header = props => {
             {props.totalItem} {i18next.t("items")}
           </p>
         </button>
-      </div>
+      </nav>
       <div
         className={classnames({
           "header-hamburger": 1,
@@ -68,7 +69,7 @@ const Header = props => {
             ></img>
           </div>
         </div>
-        <div
+        <nav
           className="header-hamburger-row2"
           onClick={() => setHambergur(!hambergur)}
         >
@@ -84,7 +85,7 @@ const Header = props => {
           <Link className="header-hamburger-row2--link" to="/register">
             {i18next.t("Register")}
           </Link>
-        </div>
+        </nav>
       </div>
     </header>
   );

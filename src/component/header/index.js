@@ -10,11 +10,16 @@ const Header = props => {
   const [hambergur, setHambergur] = useState(false);
   return (
     <header className="header">
-      <img
-        src={"/static/images/logo.png"}
-        className="logo"
-        alt="sabka bajaar"
-      ></img>
+      <picture>
+        <source media="(min-width: 768px)" srcSet="/static/images/logo2x.png" />
+        <source media="(min-width: 465px)" srcSet="/static/images/logo.png" />
+        <img
+          src={"/static/images/logo.png"}
+          className="logo"
+          alt="sabka bajaar"
+        />
+      </picture>
+
       <img
         src={"/static/menu.png"}
         className="header--openMenu"
